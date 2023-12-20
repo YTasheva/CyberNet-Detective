@@ -22,7 +22,16 @@ $(function() {
         console.log(response.result);
          /* Loop through response result */
         jQuery.each( response.result, function( title, value ) {
-            var p = $('<p>').text(title + ": " + value + "." )
+            if (value == true){
+                var p = $('<p>').text(title + ": ");
+                var icon = $('<img>').attr('src', 'assets/Images/icons8-check-50.png');
+                p.append(icon)
+            } else{
+                var p = $('<p>').text(title + ": ");
+                var icon = $('<img>').attr('src', 'assets/Images/icons8-cross-50.png');
+                p.append(icon)
+            }
+            
             $('body').append(p)
             return 
           });
