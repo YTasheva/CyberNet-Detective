@@ -25,7 +25,7 @@ function getIP(ip){
     
    
     $.ajax(settings).done(function (response) {
-        console.log(response.result);
+        console.log(response);
          /* Loop through response result */
         jQuery.each( response.result, function( title, value ) {
             if (value == true){
