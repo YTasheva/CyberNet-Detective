@@ -46,11 +46,13 @@ function getIP(ip) {
 
         /* Loop through response result */
         jQuery.each(response.result, function (title, value) {
-            var p = $('<p>').text(title + ": ");
+            var p = $('<p>').text(title.substring(2) + ": ");
             if (value == true) {
-                var icon = $('<img>').attr('src', 'assets/Images/icons8-check-50.png');
-            } else {
-                var icon = $('<img>').attr('src', 'assets/Images/icons8-cross-50.png');
+                var icon = $('<i>').attr('class', 'fa-solid fa-check');
+            } else if (value == false){
+                var icon = $('<i>').attr('class', 'fa-solid fa-x');
+            } else{
+                p = $('<p>').text(title + ": " + value);
             }
             p.append(icon)
             $(".map-container").append(p);
