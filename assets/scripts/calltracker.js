@@ -1,48 +1,36 @@
-// const url = "https://true_caller-api.p.rapidapi.com/lookup/";
-// const options = {
-//   method: "POST",
-//   headers: {
-//     "content-type": "application/json",
-//     "X-RapidAPI-Key": "2a1c572212msh9e5d1cd08c9376ap1d134bjsnceccdc52582f",
-//     "X-RapidAPI-Host": "true_caller-api.p.rapidapi.com",
-//   },
-//   body: JSON.stringify({
-//     number: "1234567890",
-//     country_code: "in",
-//   }),
-// };
-
-// try {
-//   const response = await fetch(url, options);
-//   const result = await response.text();
-//   console.log(result);
-// } catch (error) {
-//   console.error(error);
-// }
-
-
-//
 async function getData() {
-    const url = "https://true_caller-api.p.rapidapi.com/";
-    const options = {
+  var number = $("#numberInput").val();
+  var countryCode = $("#countryCode").val();
+  $("#search-button").click(function (event) {
+    event.preventDefault();
+    const settings = {
+      async: true,
+      crossDomain: true,
+      url: "https://true_caller-api.p.rapidapi.com/",
       method: "POST",
       headers: {
         "content-type": "application/json",
         "X-RapidAPI-Key": "2a1c572212msh9e5d1cd08c9376ap1d134bjsnceccdc52582f",
         "X-RapidAPI-Host": "true_caller-api.p.rapidapi.com",
       },
-      body: {
-        number: "1234567890",
-        country_code: "in",
-      },
+      processData: false,
+      data:
+        '{\n    "number": ' +
+        number +
+        ',\n    "country_code": ' +
+        countryCode +
+        "\n}",
     };
-    try {
-      const response = await fetch(url, options);
-      const result = await response.text();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
-}
 
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+  });
+}
+// $("#search-button").click(function () {
+//   var number = $("#numberInput").val();
+// //   var countryCode = $("#countryCode").val();
+
+//   console.log(typeof number, $(this), response);
+// });
 getData();
