@@ -27,10 +27,5 @@ async function getData() {
     });
   });
 }
-// $("#search-button").click(function () {
-//   var number = $("#numberInput").val();
-// //   var countryCode = $("#countryCode").val();
 
-//   console.log(typeof number, $(this), response);
-// });
 getData();
