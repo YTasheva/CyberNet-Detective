@@ -31,20 +31,16 @@ function getIP(ip) {
     $.ajax(settings).done(function (response) {
         console.log(response);
         
-        
             /* Loop through response result */
-
             jQuery.each(response.result, function (title, value) {
+                var p = $('<p>').text(title + ": ");
                 if (value == true) {
-                    var p = $('<p>').text(title + ": ");
                     var icon = $('<img>').attr('src', 'assets/Images/icons8-check-50.png');
-                    p.append(icon)
                 } else {
-                    var p = $('<p>').text(title + ": ");
                     var icon = $('<img>').attr('src', 'assets/Images/icons8-cross-50.png');
-                    p.append(icon)
                 }
-                $('body').append(p)
+                p.append(icon)
+                $(".map-container").append(p);
                 return
             });
         
