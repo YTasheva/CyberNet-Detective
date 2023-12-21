@@ -1,7 +1,7 @@
 var terms = false
 $(function () {
     getTerms();
-    
+
     $('#saveTerms').on('click', function(event) {
         event.preventDefault();
         terms = true
@@ -10,14 +10,12 @@ $(function () {
 
     $('#search-button').on('click', function (event) {
         event.preventDefault();
+        $(".map-container").empty();
         if (terms == false) {
             $('#terms').modal('show');
         } else {
-            
             var ip = $('#search-input').val();
             var ipaddress = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
-
-
             if (ipaddress.test(ip)) {
                 getIP(ip);
             }
