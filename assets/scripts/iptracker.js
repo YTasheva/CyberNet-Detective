@@ -1,17 +1,22 @@
 
-$(function() {
-    $('#search-button').on('click', function(event){
+$(function () {
+    $('#search-button').on('click', function (event) {
         event.preventDefault();
         var ip = $('#search-input').val();
-        getIP();
+        var ipaddress =  /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/; 
+        if (ipaddress.test(ip)) {
+            getIP(ip);
+        }
+        else {
+            $('#trueValue').text('Not a real IP address');
+    
+        }
     });
-
-
 
 
 });
 
-function getIP(ip){
+function getIP(ip) {
     const settings = {
         async: true,
         crossDomain: true,
@@ -22,33 +27,34 @@ function getIP(ip){
             'X-RapidAPI-Host': 'netdetective.p.rapidapi.com'
         }
     };
-    
+
     $.ajax(settings).done(function (response) {
         console.log(response);
-         /* Loop through response result */
-        jQuery.each( response.result, function( title, value ) {
-            if (value == true){
+        
+            /* Loop through response result */
+            jQuery.each(response.result, function (title, value) {
                 var p = $('<p>').text(title + ": ");
-                var icon = $('<img>').attr('src', 'assets/Images/icons8-check-50.png');
+                if (value == true) {
+                    var icon = $('<img>').attr('src', 'assets/Images/icons8-check-50.png');
+                } else {
+                    var icon = $('<img>').attr('src', 'assets/Images/icons8-cross-50.png');
+                }
                 p.append(icon)
-            } else{
-                var p = $('<p>').text(title + ": ");
-                var icon = $('<img>').attr('src', 'assets/Images/icons8-cross-50.png');
-                p.append(icon)
-            }
-            $('body').append(p)
-            return 
-          });
+                $(".map-container").append(p);
+                return
+            });
+        
+
     });
 
 
 }
 
-function old(){
+function old() {
 
 
 
-    
+
     url = "https://api.ip2location.io/?key=733750BFD4A6B2D98642ADE29D0792EF&ip=8.4.4.4&format=json"
 
     fetch(url).then(function (response) {
@@ -58,6 +64,6 @@ function old(){
 
     });
 
-    
+
 }
 
