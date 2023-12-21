@@ -9,7 +9,8 @@
   <title>CyberNet Detective</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+  <!--- JQuery for contact Form-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <!-- FONT AWESOME -->
   <script src="https://kit.fontawesome.com/5f6acac718.js" crossorigin="anonymous"></script>
   <!-- CUSTOM CSS -->
@@ -91,7 +92,7 @@
     <div class="container">
       <div class="row g-5">
         <div class="card col-md-4 col-sm-6 border-0">
-          <a href="CallTracker.html" target="_blank">
+          <a href="https://github.com/" target="_blank">
             <img src="./assets/Images/digital devices.jpg" class="card-img-top" alt="Call Tracker" /></a>
           <div class="card-body">
             <p class="card-text">
@@ -101,7 +102,7 @@
         </div>
 
         <div class="card col-md-4 col-sm-6 border-0">
-          <a href="IPTracker.html" target="_blank">
+          <a href="https://github.com/" target="_blank">
             <img src="./assets/Images/digital concept-laptop.jpg" class="card-img-top" alt="IP Tracker" /></a>
           <div class="card-body">
             <p class="card-text">
@@ -159,3 +160,54 @@
 <section id="features" class="scroll">
     <hr />
     <h2>Features</h2>
+
+
+<!--Contact Section-->
+
+<section id="contact" class="scroll">
+  <hr />
+  <h2>Contact Us</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+    $(document).ready(function () {
+        // Contact Form Submission
+        $("#contactForm").submit(function (e) {
+            e.preventDefault();
+          
+        // Displays a confirmation message
+            alert("Thank you for contacting us! We will get back to you soon.");
+        // Resets the form
+            $("#contactForm")[0].reset();
+        });
+    });
+</script>
+
+
+<script>
+  document.querySelector('#navbarNav .nav-link[href="#contact"]').addEventListener('click', function () {
+    document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
