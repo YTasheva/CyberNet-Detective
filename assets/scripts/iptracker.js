@@ -3,7 +3,7 @@ $(function() {
     $('#search-button').on('click', function(event){
         event.preventDefault();
         var ip = $('#search-input').val();
-        getIP(ip);
+        getIP();
     });
 
 
@@ -23,7 +23,6 @@ function getIP(ip){
         }
     };
     
-   
     $.ajax(settings).done(function (response) {
         console.log(response);
          /* Loop through response result */
@@ -37,11 +36,28 @@ function getIP(ip){
                 var icon = $('<img>').attr('src', 'assets/Images/icons8-cross-50.png');
                 p.append(icon)
             }
-            
             $('body').append(p)
             return 
           });
     });
+
+
 }
 
+function old(){
+
+
+
+    
+    url = "https://api.ip2location.io/?key=733750BFD4A6B2D98642ADE29D0792EF&ip=8.4.4.4&format=json"
+
+    fetch(url).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        console.log(data);
+
+    });
+
+    
+}
 
