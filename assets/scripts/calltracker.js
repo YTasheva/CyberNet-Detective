@@ -1,8 +1,8 @@
-    
 async function getData() {
-
-    var number = $("#numberInput").val();
-    var countryCode = $("#countryCode").val();
+  var number = $("#numberInput").val();
+  var countryCode = $("#countryCode").val();
+  $("#search-button").click(function (event) {
+    event.preventDefault();
     const settings = {
       async: true,
       crossDomain: true,
@@ -10,7 +10,7 @@ async function getData() {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb",
+        "X-RapidAPI-Key": "2a1c572212msh9e5d1cd08c9376ap1d134bjsnceccdc52582f",
         "X-RapidAPI-Host": "true_caller-api.p.rapidapi.com",
       },
       processData: false,
@@ -25,6 +25,7 @@ async function getData() {
     $.ajax(settings).done(function (response) {
       console.log(response);
     });
+  });
 }
 // $("#search-button").click(function () {
 //   var number = $("#numberInput").val();
