@@ -18,15 +18,22 @@ $(function () {
             var ipaddress = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
             if (ipaddress.test(ip)) {
                 getIP(ip);
-                old();
+                ipDetails(ip);
             }
             else {
                 $('#trueValue').text('Not a real IP address');
-
+    
             }
         }
     });
 
+    $('#modalB').on('click', function(event) {
+        $('#exampleModalLong').modal('show');
+    });
+
+    $('.closeMod').on('click', function(event) {
+        $('#exampleModalLong').modal('hide');
+    });
 
 });
 
@@ -43,20 +50,27 @@ function getIP(ip) {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
+        $("#info").empty(); 
         /* Loop through response result */
         jQuery.each(response.result, function (title, value) {
-            var p = $('<p>').text(title.substring(2) + ": ");
+            var tr =  $('<tr>');
+            var td1 = $('<th>').text(title.substring(2) + ": ");
+            var td2 = $('<td>');
             if (value == true) {
                 var icon = $('<i>').attr('class', 'fa-solid fa-check');
             } else if (value == false){
                 var icon = $('<i>').attr('class', 'fa-solid fa-x');
             } else{
-                p = $('<p>').text(title + ": " + value);
+                td1 = $('<th>').text(title);
+                td2 = $('<td>').text(value);
             }
-            p.append(icon)
-            $(".map-container").append(p);
+            tr.attr('id', 'ipTable');
+            td1.attr('id', 'ipTitle');
+            td2.attr('id', 'ipValue');
+            $(td2).append(icon)
+            $(tr).append(td1);
+            $(tr).append(td2);
+            $("#info").append(tr); 
             return
         });
 
@@ -74,6 +88,7 @@ function getTerms() {
     }
 }
 
+/* to get */
 function old() {
     var lan = "40.714728"
     var lon = "-73.998672"
@@ -82,5 +97,29 @@ function old() {
     var mapImg = $("<img>").attr('src', map)
     $(".map-container").append(mapImg);
 
+}
+
+function ipDetails(ip){
+    
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://ip-lookup-by-api-ninjas.p.rapidapi.com/v1/iplookup?address=' + ip,
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e',
+            'X-RapidAPI-Host': 'ip-lookup-by-api-ninjas.p.rapidapi.com'
+        }
+    };
+    
+    $.ajax(settings).done(function (response) {
+
+        $('#isp').text(response.isp);
+        $('#country').text(response.country);
+        $('#region').text(response.region);
+        $('#regCode').text(response.region_code);
+        
+
+    });
 }
 
