@@ -50,7 +50,7 @@ function getIP(ip) {
     };
 
     $.ajax(settings).done(function (response) {
-
+        $("#info").empty(); 
         /* Loop through response result */
         jQuery.each(response.result, function (title, value) {
             var tr =  $('<tr>');
@@ -119,8 +119,7 @@ function ipDetails(ip){
         $('#region').text(response.region);
         $('#regCode').text(response.region_code);
         
-        var map = $('<img>').attr('src', url);
-        $('#map-container').append(map)
+
     });
 }
 
