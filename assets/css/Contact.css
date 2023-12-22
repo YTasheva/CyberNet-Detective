@@ -26,7 +26,7 @@
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1.5rem;
-    border: 1px solid #192cda;
+    border: 1px solid #3e50f1;
     background-color: #fcf6f6;
     color: #141313;
   }
@@ -36,7 +36,7 @@
   }
   
   #contactForm button {
-    background-color: #2c60c8;
+    background-color: rgb(20, 98, 255);
     color: #edecf3;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -44,6 +44,6 @@
   }
   
   #contactForm button:hover {
-    background-color: #fff;
-    color: #f7f7f7;
+    background-color: #0949c8;
+    color: #ffff;
   }
