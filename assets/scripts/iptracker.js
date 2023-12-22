@@ -18,6 +18,7 @@ $(function () {
             var ipaddress = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
             if (ipaddress.test(ip)) {
                 getIP(ip);
+                old();
             }
             else {
                 $('#trueValue').text('Not a real IP address');
@@ -74,19 +75,12 @@ function getTerms() {
 }
 
 function old() {
-
-
-
-
-    url = "https://api.ip2location.io/?key=733750BFD4A6B2D98642ADE29D0792EF&ip=8.4.4.4&format=json"
-
-    fetch(url).then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        console.log(data);
-
-    });
-
+    var lan = "40.714728"
+    var lon = "-73.998672"
+    var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=400x400&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
+    
+    var mapImg = $("<img>").attr('src', map)
+    $(".map-container").append(mapImg);
 
 }
 
