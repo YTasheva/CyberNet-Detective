@@ -31,7 +31,7 @@ $(function () {
         $('#exampleModalLong').modal('show');
     });
 
-    $('#closeMod').on('click', function(event) {
+    $('.closeMod').on('click', function(event) {
         $('#exampleModalLong').modal('hide');
     });
 
@@ -50,7 +50,6 @@ function getIP(ip) {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
 
         /* Loop through response result */
         jQuery.each(response.result, function (title, value) {
@@ -89,6 +88,7 @@ function getTerms() {
     }
 }
 
+/* to get */
 function old() {
     var lan = "40.714728"
     var lon = "-73.998672"
@@ -113,10 +113,7 @@ function ipDetails(ip){
     };
     
     $.ajax(settings).done(function (response) {
-        console.log(response);
-        var lon = response.country_code;
-        var lan = response.country;
-        var url = 'https://maps.googleapis.com/maps/api/staticmap?center='+ lan +','+ lon +'&zoom=14&size=400x400&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8&' 
+
         $('#isp').text(response.isp);
         $('#country').text(response.country);
         $('#region').text(response.region);
