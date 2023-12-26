@@ -4,8 +4,9 @@ $(function () {
 
     $('#saveTerms').on('click', function(event) {
         event.preventDefault();
-        terms = true
+        terms = true;
         localStorage.setItem("terms", JSON.stringify(terms));
+        $('#terms').modal('hide');
     });
 
     $('#search-button').on('click', function (event) {
@@ -34,6 +35,10 @@ $(function () {
 
     $('.closeMod').on('click', function(event) {
         $('#exampleModalLong').modal('hide');
+    });
+
+    $('#cMode').on('click', function(event) {
+        $('#terms').modal('hide');
     });
 
 });
