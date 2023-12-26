@@ -19,6 +19,7 @@ $(function () {
             if (ipaddress.test(ip)) {
                 getIP(ip);
                 ipDetails(ip);
+                map(ip)
             }
             else {
                 $('#trueValue').text('Not a real IP address');
@@ -89,13 +90,31 @@ function getTerms() {
 }
 
 /* to get */
-function old() {
-    var lan = "40.714728"
-    var lon = "-73.998672"
-    var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=400x400&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
+function map(ip) {
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/iplocation?ip='+ ip +'&apikey=873dbe322aea47f89dcf729dcc8f60e8',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e',
+            'X-RapidAPI-Host': 'find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com'
+        }
+    };
+
+    
+     $.ajax(settings).done(function (response) {
+        console.log(response);
+
+    var lan = response.latitude;
+    var lon = response.longitude;
+    var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=300x300&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
     
     var mapImg = $("<img>").attr('src', map)
-    $(".map-container").append(mapImg);
+    $(".map-container").append(mapImg);  
+    });
+
+    
 
 }
 
