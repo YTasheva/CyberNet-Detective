@@ -38,3 +38,6 @@
         box-sizing: content-box;
         border-radius: 15px;
 }
+.pb-3 {
+    text-align: center;
+}

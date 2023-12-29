@@ -1,8 +1,8 @@
 async function getData() {
-  var number = $("#numberInput").val();
-  var countryCode = $("#countryCode").val();
   $("#search-button").click(function (event) {
     event.preventDefault();
+    var number = $("#numberInput").val();
+    var countryCode = $("#countryCode").val();
     const settings = {
       async: true,
       crossDomain: true,
@@ -10,23 +10,24 @@ async function getData() {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "2a1c572212msh9e5d1cd08c9376ap1d134bjsnceccdc52582f",
+        "X-RapidAPI-Key": "a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb",
         "X-RapidAPI-Host": "true_caller-api.p.rapidapi.com",
       },
       processData: false,
       data:
-        '{\n    "number": ' +
+        '{\n    "number": "' +
         number +
-        ',\n    "country_code": ' +
+        '",\n    "country_code": "' +
         countryCode +
-        "\n}",
+        '"}',
     };
-
+    console.log(settings.data);
     $.ajax(settings).done(function (response) {
       console.log(response);
     });
   });
 }
+
 // $("#search-button").click(function () {
 //   var number = $("#numberInput").val();
 // //   var countryCode = $("#countryCode").val();
@@ -34,3 +35,29 @@ async function getData() {
 //   console.log(typeof number, $(this), response);
 // });
 getData();
+
+//   $.each(data, function (key, value) {
+//     if (value !== "") {
+//       urlStr += key + "=" + encodeURIComponent(value) + "&";
+//     }
+//   });
+
+//   urlStr = urlStr.slice(0, -1);
+
+//   let d = "";
+//   $.ajax({
+//     url: urlStr,
+//     method: "GET",
+//     success: function (response) {
+//       console.log(response);
+//     },
+//     error: function (error) {
+//       console.log(error);
+//     },
+//   });
+// });
+
+// key1 = e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e;
+// key2 = a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb
+// key3 = 6ddaa51237mshe5dca3f57aaf9eap1694c4jsnc5f95fdfc5c3
+// key4 = 2a1c572212msh9e5d1cd08c9376ap1d134bjsnceccdc52582f
