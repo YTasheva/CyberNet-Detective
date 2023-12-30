@@ -5,6 +5,12 @@
     color: #fff;
     padding: 50px 0;
   }
+
+  a:hover {
+    -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    background-color: var(--NAV--LINK-HOVER);
+}
   
   #contact h2 {
     color: #060605;
