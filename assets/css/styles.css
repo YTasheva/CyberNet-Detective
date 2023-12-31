@@ -1,3 +1,5 @@
+/* Home Page */
+
 body {
     margin-top: 56px;
   }
@@ -27,7 +29,7 @@ body {
     position: absolute;
     bottom: 1%;
     right: 5%;
-    background-color: #7cb0c77d;
+    background-color: #5f899b7d;
   }
   
   .card img:hover {
@@ -41,6 +43,10 @@ body {
     background-color: var(--NAV--LINK-HOVER);
   }
   
+  h3 {
+    font-size: 1.75rem;
+    color: rgb(123, 123, 123);
+  }
 
   /* .footer --> footer */
   footer {
