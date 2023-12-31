@@ -1,16 +1,20 @@
 /* IP Page Styles */
 .bannerip {
-    background-image: url("../Images/digital\ devices.jpg");
+    background-image: url("../Images/AI4 banner.jpg");
     background-repeat: no-repeat;
     Background-position: top;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 350px;
+    height: 500px;
     position: relative;
 }
 
-
+.scroll {
+    scroll-margin-top: 56px;
+    text-align: center;
+}
+  
 .ip-container {
     display: flex;
     flex-direction: column;
@@ -59,13 +63,9 @@
 .mask {
     background-color:rgba(0, 0, 0, 0.6);
 }
-
-.card img:hover {
-    cursor: pointer;
-  }
-  
   
   a:hover {
     -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
     background-color: var(--NAV--LINK-HOVER);
+}
