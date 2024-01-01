@@ -111,7 +111,6 @@ function ipDetails(ip){
     };
     
     $.ajax(settings).done(function (response) {
-        console.log(response);
 
         $('#isp').text(response.org);
         $('#country').text(response.country_name);
