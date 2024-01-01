@@ -12,97 +12,120 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <!-- FONT AWESOME -->
   <script src="https://kit.fontawesome.com/5f6acac718.js" crossorigin="anonymous"></script>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" /> 
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./assets/css/Contact.css" />
 </head>
+
 <body>
   <!-- MAIN LOGO / NAV -->
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">CyberNet Detective</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html#about">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./CallTracker.html">Call Tracker</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./IPTracker.html">IP Tracker</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./Contact.html">Contact us</a>
-              </li>
-            </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CyberNet Detective</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./CallTracker.html">Call Tracker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./IPTracker.html">IP Tracker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- JUMBOTRON HERO -->
+
+    <section id="hero" class="container-fluid background-image">
+      <h2 class="hero p-2">Contact Us</h2>
+    </section>
+
+  </header>
+
+  <!-- Contact Us Section-->
+  <main>
+    <section id="about" class="scroll">
+      <hr />
+      <h2>How to Contact Us: Questions or Suggestions</h2>
+      <br>
+      <p>Feel free to send us an email using the contact form below or if you
+        would like to speak to someone via phone give our Customer Support team a ring on our toll free number.</p>
+      <br>
+      <p>
+      <h2>What's On Your Mind?</h2>
+      <br>
+
+      <b>CyberNet Detective</b>
+      reaches followers from all corners of the world.
+      We’d truly like to hear what you think about our content and website.
+      If you’d like to share what’s on your mind, you can do that below.
+      </p>
+      <br>
+
+    </section>
+
+    <!-- CONTACT FORM -->
+
+    <section id="contact" class="scroll">
+      <hr />
+      <h2>Contact Us</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
         </div>
-      </nav>
-
-  <!-- JUMBOTRON HERO -->
-
-  <section id="hero" class="container-fluid background-image">
-    <h2 class="hero p-2">Contact Us</h2>
-  </section>
-  
-</header>    
-
-<!-- CONTACT FORM -->
-
-<section id="contact" class="scroll">
-  <hr />
-  <h2>Contact Us</h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <form id="contactForm">
-          <div class="mb-3">
-            <label for="fullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="fullName" name="fullName" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
       </div>
-    </div>
-  </div>
-</section>
-<br>
-<!--Google map-->
-<div class="container-fluid">
-    <h2>Our Location</h2>
-    <p>
-<div id="map-container" class="z-depth-1-half map-container" style="height: 300px">
-  <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-    style="border:0" allowfullscreen></iframe>
-  </p>
-</div>
-<hr />
-  <h3>
-<footer>
-  <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
-</footer>
+    </section>
+    <br>
+    <!--Google map-->
+    <div class="container-fluid">
+      <h2>Our Location</h2>
+      <p>
+      <div id="map-container" class="z-depth-1-half map-container" style="height: 300px">
+        <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+          style="border:0" allowfullscreen></iframe>
+        </p>
+      </div>
+      <hr />
+      <h3>
+        <footer>
+          <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
+        </footer>
 
-<!-- CONTAINER END -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-  crossorigin="anonymous"></script>
+        <!-- CONTAINER END -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous"></script>
 </body>
 
 </html>
