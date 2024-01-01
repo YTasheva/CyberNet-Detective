@@ -16,15 +16,16 @@ $(function () {
             $('#terms').modal('show');
         } else {
             var ip = $('#search-input').val();
-            var ipaddress = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
-            if (ipaddress.test(ip)) {
+            var ipv4 = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
+            var iPv6 =  /^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/;
+
+            if (ipv4.test(ip) || iPv6.test(ip)) {
                 getIP(ip);
                 ipDetails(ip);
-                map(ip)
+                
             }
             else {
                 $('#trueValue').text('Not a real IP address');
-    
             }
         }
     });
@@ -94,56 +95,37 @@ function getTerms() {
     }
 }
 
-/* to get */
-function map(ip) {
-    const settings = {
-        async: true,
-        crossDomain: true,
-        url: 'https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/iplocation?ip='+ ip +'&apikey=873dbe322aea47f89dcf729dcc8f60e8',
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e',
-            'X-RapidAPI-Host': 'find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com'
-        }
-    };
 
-    
-     $.ajax(settings).done(function (response) {
-        console.log(response);
-
-    var lan = response.latitude;
-    var lon = response.longitude;
-    var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=300x300&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
-    
-    var mapImg = $("<img>").attr('src', map)
-    $(".map-container").append(mapImg);  
-    });
-
-    
-
-}
 
 function ipDetails(ip){
     
     const settings = {
         async: true,
         crossDomain: true,
-        url: 'https://ip-lookup-by-api-ninjas.p.rapidapi.com/v1/iplookup?address=' + ip,
+        url: 'https://ip-geolocation-find-ip-location-and-ip-info.p.rapidapi.com/backend/ipinfo/?ip=' + ip,
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': 'e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e',
-            'X-RapidAPI-Host': 'ip-lookup-by-api-ninjas.p.rapidapi.com'
+            'X-RapidAPI-Host': 'ip-geolocation-find-ip-location-and-ip-info.p.rapidapi.com'
         }
     };
     
     $.ajax(settings).done(function (response) {
 
-        $('#isp').text(response.isp);
-        $('#country').text(response.country);
+        $('#isp').text(response.org);
+        $('#country').text(response.country_name);
         $('#region').text(response.region);
-        $('#regCode').text(response.region_code);
+        $('#regCode').text(response.postal);
+        $('#host').text(response.hostname);
+        $('#city').text(response.city);
         
-
+        var lan = response.latitude;
+        var lon = response.longitude;
+        var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=300x300&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
+    
+        var mapImg = $("<img>").attr('src', map)
+        $(".map-container").append(mapImg);  
     });
+    
 }
 
