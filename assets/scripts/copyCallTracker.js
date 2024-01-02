@@ -6,7 +6,7 @@ async function getData() {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "6ddaa51237mshe5dca3f57aaf9eap1694c4jsnc5f95fdfc5c3",
+      "X-RapidAPI-Key": "e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e",
       "X-RapidAPI-Host": "true_caller-api.p.rapidapi.com",
     },
     processData: false,
@@ -14,7 +14,7 @@ async function getData() {
   };
   console.log(settings.data)
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    console.log(response, "data");
   });
 }
 

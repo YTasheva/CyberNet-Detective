@@ -10,7 +10,7 @@ async function getData() {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb",
+        "X-RapidAPI-Key": "e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e",
         "X-RapidAPI-Host": "true_caller-api.p.rapidapi.com",
       },
       processData: false,
@@ -28,34 +28,11 @@ async function getData() {
   });
 }
 
-// $("#search-button").click(function () {
-//   var number = $("#numberInput").val();
-// //   var countryCode = $("#countryCode").val();
 
-//   console.log(typeof number, $(this), response);
-// });
 getData();
 
-//   $.each(data, function (key, value) {
-//     if (value !== "") {
-//       urlStr += key + "=" + encodeURIComponent(value) + "&";
-//     }
-//   });
 
-//   urlStr = urlStr.slice(0, -1);
 
-//   let d = "";
-//   $.ajax({
-//     url: urlStr,
-//     method: "GET",
-//     success: function (response) {
-//       console.log(response);
-//     },
-//     error: function (error) {
-//       console.log(error);
-//     },
-//   });
-// });
 
 // key1 = e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e;
 // key2 = a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb

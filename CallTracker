@@ -76,9 +76,7 @@
             <form id="search-form" class="form">
               <div class="form-inline form-group">
                 <div class="input-group">
-                  <input class="form-input-search" type="text" id="numberInput" placeholder="number phone"
-                    aria-labelledby="form-heading" aria-controls=" call search-input" />
-                  <input class="form-input-search" type="text" id="countryCode" placeholder="country code"
+                  <input class="form-input-search" type="text" id="search-input" placeholder="Enter number phone"
                     aria-labelledby="form-heading" aria-controls=" call search-input" />
                   <div class="">
                     <button type="submit" class="search-button" id="search-button" aria-label="submit">
@@ -195,11 +193,10 @@
             </div>
                 </div>
             </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     
-        <!-- <script src="assets/scripts/calltracker.js"></script> -->
-        <script src="./assets/scripts/copyCallTracker.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
       </body>
 </html>
