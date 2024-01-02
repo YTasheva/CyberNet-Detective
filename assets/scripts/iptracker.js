@@ -1,14 +1,14 @@
 var terms = false
 $(function () {
     getTerms();
-
+    /* On Click Save Terms */
     $('#saveTerms').on('click', function(event) {
         event.preventDefault();
         terms = true;
         localStorage.setItem("terms", JSON.stringify(terms));
         $('#terms').modal('hide');
     });
-
+    /* On Submit Ip Address */
     $('#search-button').on('click', function (event) {
         event.preventDefault();
         $(".map-container").empty();
@@ -29,21 +29,22 @@ $(function () {
             }
         }
     });
-
+    /* Details Modal Show */
     $('#modalB').on('click', function(event) {
-        $('#exampleModalLong').modal('show');
+        $('#details').modal('show');
     });
-
+    /* Details Modal Close */
     $('.closeMod').on('click', function(event) {
-        $('#exampleModalLong').modal('hide');
+        $('#details').modal('hide');
     });
-
+    /* Terms Modal Close */
     $('#cMode').on('click', function(event) {
         $('#terms').modal('hide');
     });
 
 });
 
+/* Get detailed information about IP address */
 function getIP(ip) {
     const settings = {
         async: true,
@@ -55,7 +56,7 @@ function getIP(ip) {
             'X-RapidAPI-Host': 'netdetective.p.rapidapi.com'
         }
     };
-
+    
     $.ajax(settings).done(function (response) {
         $("#info").empty(); 
         /* Loop through response result */
@@ -96,7 +97,7 @@ function getTerms() {
 }
 
 
-
+/* Get Basic details about IP address */
 function ipDetails(ip){
     
     const settings = {
@@ -111,7 +112,7 @@ function ipDetails(ip){
     };
     
     $.ajax(settings).done(function (response) {
-
+        /* Get details from response and output to page */
         $('#isp').text(response.org);
         $('#country').text(response.country_name);
         $('#region').text(response.region);
@@ -119,11 +120,14 @@ function ipDetails(ip){
         $('#host').text(response.hostname);
         $('#city').text(response.city);
         
+        /* Get Longitude and Latitude from Response */
         var lan = response.latitude;
         var lon = response.longitude;
+        /* Output as Google map */
         var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=300x300&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
     
         var mapImg = $("<img>").attr('src', map)
+        mapImg.attr('id', 'gmap')
         $(".map-container").append(mapImg);  
     });
     

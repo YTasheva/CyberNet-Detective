@@ -91,6 +91,17 @@ body {
     background-color: #0949c8;
     color: #ffff;
   }
+  .modal-body {
+    color:  black ;
+  }
+  .modal-title{
+    color: #ffffff;
+  }
+  .modal-header{
+    background-color: #353432;
+  }
+  
+
 
   /* .map-container --> map-container */
   .map-container{
