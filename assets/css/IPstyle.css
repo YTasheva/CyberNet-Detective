@@ -27,7 +27,7 @@ h3 {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
     background-color: #fff;
     width: 60%;
     margin:auto;
@@ -66,12 +66,12 @@ h3 {
 }
 
 .mask {
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(0, 0, 0, 0.229);
 }
   
   a:hover {
     -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.624);
     background-color: var(--NAV--LINK-HOVER);
 }
 
