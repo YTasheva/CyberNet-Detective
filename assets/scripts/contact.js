@@ -6,7 +6,7 @@
       
       setTimeout(function () {
         $("#exampleModal").modal("hide");
-      }, 2250); 
+      }, 3500); 
     });
   });
 

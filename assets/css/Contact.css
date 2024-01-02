@@ -95,9 +95,12 @@ body {
     color:  black ;
   }
   .modal-title{
-    color: #060605;
+    color: #ffffff;
   }
-
+  .modal-header{
+    background-color: #353432;
+  }
+  
 
 
   /* .map-container --> map-container */
