@@ -1,13 +1,12 @@
-$(document).ready(function () {
-    // Contact Form Submission
+  $(document).ready(function () {
     $("#contactForm").submit(function (e) {
-      e.preventDefault();
-  
-      // Display Bootstrap modal
-      $("#myModal").modal("show");
-  
-      // Resets the form
-      $("#contactForm")[0].reset();
+      e.preventDefault(); // Prevent the form from submitting
+          $("#exampleModal").modal("show");
+
+      
+      setTimeout(function () {
+        $("#exampleModal").modal("hide");
+      }, 1250); 
     });
   });
-  
+
