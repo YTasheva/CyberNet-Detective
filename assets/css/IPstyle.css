@@ -6,7 +6,7 @@
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 350px;
+    height: 400px;
     position: relative;
 }
 
@@ -99,57 +99,8 @@ footer {
     padding: 30px;
     clear: both;
     text-align: center;
-    background-color: #343a40; /* Dark background color */
-  color: #fff;
   }
   
   footer h3 {
     font-size: 15px;
-    font-weight: bold;
-    color: #007bff; /* Primary color */
-    margin-bottom: 15px;
   }
-
-
-.list-unstyled li a {
-  color: #fff;
-}
-
-/* Subscribe Form Styles */
-.subscribe-form {
-  margin-top: 20px;
-}
-
-.form-control {
-  border-radius: 8px;
-}
-
-.submit {
-  background-color: #007bff; /* Primary color */
-  color: #fff;
-  border-radius: 8px;
-}
-
-/* Social Icons Styles */
-.ftco-footer-social li {
-  margin-right: 10px;
-}
-
-.ftco-footer-social a {
-  font-size: 24px;
-  color: #fff;
-}
-
-.ftco-footer-social a:hover {
-  color: #007bff; /* Primary color */
-}
-
-/* Copyright Text Styles */
-.copyright {
-  color: #fff;
-}
-
-/* Tooltip Styles */
-[data-toggle="tooltip"] {
-  color: #007bff; /* Primary color */
-}
