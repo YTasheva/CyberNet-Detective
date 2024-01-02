@@ -1,3 +1,30 @@
+/* Call Tracker Styles */
+
+.bannerip {
+  background-image: url("../Images/mobile.span.jpg");
+  background-repeat: no-repeat;
+  Background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+
+.scroll {
+  scroll-margin-top: 56px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #042c75;
+}
+
+.mask {
+  background-color:rgba(0, 0, 0, 0.229);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -36,156 +63,40 @@
 .history-search{
     width: 100%;
 }
+  
+  a:hover {
+    -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    background-color: var(--NAV--LINK-HOVER);
+}
 
 
+.list-display li {
+  margin-bottom:.4rem;
+  font-size:1.1rem;
+}
+.list-checkmarks {
+  padding-left:1.5rem;
+}
+.list-checkmarks li {
+  list-style-type:none;
+  padding-left:1rem;
+}
+.list-checkmarks li:before {    
+font-family: 'FontAwesome';
+content: "\f00c";
+margin:0 10px 0 -28px;
+color: #125de9;
+}
 
-a {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease; }
-    a:hover, a:focus {
-      text-decoration: none !important;
-      outline: none !important; }
-  
-  h1, h2, h3, h4, h5,
-  .h1, .h2, .h3, .h4, .h5 {
-    line-height: 1.5;
-    font-weight: 400;
-    font-family: "Poppins", Arial, sans-serif; }
-  
-  .img,
-  .blog-img,
-  .user-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; }
-  
-  .ftco-footer-social li {
-    list-style: none;
-    margin: 0 10px 0 0;
-    display: inline-block; }
-    .ftco-footer-social li a {
-      height: 40px;
-      width: 40px;
-      display: block;
-      background: rgba(0, 0, 0, 0.05);
-      border-radius: 50%;
-      position: relative; }
-      .ftco-footer-social li a span {
-        position: absolute;
-        font-size: 20px;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
-      .ftco-footer-social li a:hover {
-        color: #fff; }
-  
-  .form-control {
-    height: 52px;
-    background: #fff;
-    color: #000;
-    font-size: 18px;
-    border-radius: 0px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid rgba(0, 0, 0, 0.1); }
-    .form-control:focus, .form-control:active {
-      outline: none !important;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-  
-  textarea.form-control {
-    height: inherit !important; }
-  
-  .ftco-section {
-    padding: 12em 0; }
-    .ftco-section h2 {
-      margin-bottom: 0; }
-  
+
+  /* .footer --> footer */
   footer {
-    padding: 7em 0; }
+    padding: 30px;
+    clear: both;
+    text-align: center;
+  }
   
-  .footer-10 {
-    background: #222222;
-    padding: 0 0 4em 0; }
-    .footer-10 .border-top, .footer-10 .border-bottom {
-      border-color: rgba(255, 255, 255, 0.1) !important; }
-    .footer-10 .footer-heading {
-      font-size: 18px;
-      color: #fff;
-      margin-bottom: 30px; }
-    .footer-10 p {
-      color: rgba(255, 255, 255, 0.3); }
-    .footer-10 a {
-      color: #1089ff; }
-    .footer-10 .con.con-1 {
-      background: #1e1e1e; }
-    .footer-10 .con.con-2 {
-      background: #1c1c1c; }
-    .footer-10 .con.con-3 {
-      background: #252525; }
-    .footer-10 .list-unstyled li a {
-      color: rgba(255, 255, 255, 0.2); }
-      .footer-10 .list-unstyled li a:hover {
-        color: #fff; }
-    .footer-10 .con-info .icon {
-      width: 50px;
-      height: 50px;
-      background: #1089ff;
-      border-radius: 50%;
-      margin: 0 auto;
-      margin-bottom: 10px; }
-      .footer-10 .con-info .icon span {
-        color: #fff;
-        font-size: 24px; }
-    .footer-10 .con-info span {
-      color: rgba(255, 255, 255, 0.8); }
-    .footer-10 .subscribe-form .form-group {
-      position: relative;
-      margin-bottom: 0;
-      border-radius: 0; }
-      .footer-10 .subscribe-form .form-group input {
-        background: white !important;
-        border: none !important;
-        outline: none !important;
-        color: rgba(0, 0, 0, 0.3) !important;
-        font-size: 16px;
-        border-radius: 0; }
-        .footer-10 .subscribe-form .form-group input::-webkit-input-placeholder {
-          /* Chrome/Opera/Safari */
-          color: rgba(0, 0, 0, 0.3) !important; }
-        .footer-10 .subscribe-form .form-group input::-moz-placeholder {
-          /* Firefox 19+ */
-          color: rgba(0, 0, 0, 0.3) !important; }
-        .footer-10 .subscribe-form .form-group input:-ms-input-placeholder {
-          /* IE 10+ */
-          color: rgba(0, 0, 0, 0.3) !important; }
-        .footer-10 .subscribe-form .form-group input:-moz-placeholder {
-          /* Firefox 18- */
-          color: rgba(0, 0, 0, 0.3) !important; }
-        .footer-10 .subscribe-form .form-group input:focus {
-          outline: none !important;
-          -webkit-box-shadow: none;
-          box-shadow: none; }
-      .footer-10 .subscribe-form .form-group .submit {
-        color: #fff !important;
-        display: block;
-        width: 130px;
-        height: 52px;
-        font-size: 16px;
-        background: #1089ff !important;
-        border: none;
-        border-radius: 0; }
-        .footer-10 .subscribe-form .form-group .submit:hover, .footer-10 .subscribe-form .form-group .submit:focus {
-          text-decoration: none !important;
-          outline: none !important; }
-    .footer-10 .subscribe-form .subheading {
-      display: inline-block;
-      margin-top: 5px;
-      color: rgba(255, 255, 255, 0.3);
-      font-size: 13px; }
-    .footer-10 .ftco-footer-social li a {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff; }
+  footer h3 {
+    font-size: 15px;
+  }

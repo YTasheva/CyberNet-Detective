@@ -4,30 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Moses Opiah" />
+  <meta name="author" content="CyberNet Detective" />
   <meta name="description" content="IP Tracker" />
   <title>IP Tracker</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-  <!-- FONT AWESOME -->
+<!-- FONT AWESOME -->
   <script src="https://kit.fontawesome.com/5f6acac718.js" crossorigin="anonymous"></script>
-  <!-- CUSTOM CSS -->
+<!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./assets/css/IPstyle.css" />
 </head>
 
 <body>
 
-  <!-- Modal -->
+<!-- Modal -->
   <div class="modal" id="terms" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Terms and Conditions</h5>
+          <h5 class="modal-title" id="exampleModalLabel">YOUR RESULTS ARE READY</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          By clicking accept you have read our terms and conditions and have will not use this information against others.
+          There are limits to how you may use CyberNet Detective reports.
+          Please review the box below to continue to your report.
+          I will not use information provided by CyberNet Detective for decisions about employment,
+          insurance, tenant screening, consumer credit or any other purpose requiring the General Data Protection
+          Regulation (GDPR)
+          and the Fair Credit Reporting Act (FCRA) compliance.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cMode">Close</button>
@@ -37,6 +42,7 @@
     </div>
   </div>
 
+   <!-- MAIN LOGO / NAV -->
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
@@ -48,45 +54,43 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Us</a>
+              <a class="nav-link" href="index.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#work">Tools</a>
+              <a class="nav-link" href="CallTracker.html">Call Tracker</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Features</a>
+              <a class="nav-link" href="IPTracker.html">IP Tracker</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact us</a>
+              <a class="nav-link" href="Contact.html">Contact us</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-  </header>
-
+<!-- JUMBOTRON HERO -->
   <div class="bannerip p-5 text-center bg-image rounded-3">
     <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">Welcome to IP Tracker</h1>
+          <h1 class="mb-3 mt-3">Welcome to IP Tracker</h1>
         </div>
       </div>
     </div>
   </div>
   <section id="hero" class="container-fluid background-image">
     <h2 class="hero p-2"></h2>
-
   </section>
 
+</header>
 
 
-
+<!-- IP TRACKER SECTION-->
   <div class="ip-container">
     <div class="title">IP Tracker</div>
 
@@ -99,7 +103,8 @@
     <p id="trueValue"> </p>
 
     <div class="map-container">
-      <!-- Google Maps API -->
+
+  <!-- Google Maps API -->
     </div>
 
     <table class="info-table">
@@ -117,7 +122,7 @@
       </tr>
       <tr>
         <th>Hostname</th>
-        <td>-</td>
+        <td id="host">-</td>
       </tr>
       <tr>
         <th>Region/State</th>
@@ -130,7 +135,7 @@
       <tr>
         <th>More Details</th>
         <td>
-          <!-- Button trigger modal -->
+    <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" id="modalB">
             Details
           </button>
@@ -139,10 +144,7 @@
     </table>
   </div>
 
-
-
-
-  <!-- Modal -->
+<!-- Modal -->
   <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -159,12 +161,152 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary closeMod" data-dismiss="modal" >Close</button>
+          <button type="button" class="btn btn-secondary closeMod" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Norton Seal-->
+  <div class="column">
+    <div class="column p-5 text-center bg-image">
+      <figure class="image">
+        <img src="/assets/Images/norton_secure_seal.png" height="30" alt="">
+      </figure>
+    </div>
+  </div>
+
+  <!-- ABOUT IP TRACKER-->
+  <main>
+    <section id="about" class="scroll">
+      <hr />
+      <h2>How to get someone's IP address</h2>
+    </section>
+    <section>
+      <div class="container clearfix">
+        <img class="col-5 col-sm-3 col-md-3 float-start mb-3 mt-4 me-3" src="assets/Images/future-robot-cyborg.jpg"
+          alt="About IP Tracker image" />
+        <p>
+          <br>
+          <b>Using the Command Prompt.</b>
+          On Windows devices, you can find an IP address for a website with the command prompt.
+          It is easiest to find the command prompt from the search box in the Start menu.
+          For Mac devices, the application is known as Terminal and is found in the Utilities folder.
+          Once you have located the command prompt, open it and you will see a black DOS screen appear.
+          Now, you can use a ping to find the IP address. A ping will attempt to establish a connection between
+          your device and the one with the IP address you are looking for.
+          On the command prompt screen, type the words “ping host address,” where “host address” equals the address of
+          the website you’re looking to trace, and hit Enter.
+          For example, if you want to find the IP address of Facebook, you would type the words “ping www.facebook.com”
+          and then press enter.
+          Now, your computer will try to find the server for that site. If it’s successful, the IP address you’re
+          searching for will appear!
+
+        <p>
+          <b>Examine the Header of an Incoming Email.</b>
+          An email is one of the best places to check. IP address information can be found using a function embedded in
+          most email programs.
+          This method varies depending on the type of email service or program you are using.
+          The “headers” information is the most important thing to look for. There should be an option called “Internet
+          headers” or simply “headers” in the settings of your email program.
+          Turning on this option displays a new range of data on your messages, including the sender’s IP address.
+
+        <p>
+          It’s crucial to remember that header information can’t always be trusted.
+          In fact, it can be fake! So whenever you find an IP address using this method,
+          perform an IP check by using the command prompt to ping the address and confirm its validity.
+        </p>
+        <br />
+
+         <!-- Listed items section-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <h3>What you will get with this tool</h3>
+              <hr />
+              <ul class="list-display list-checkmarks">
+                <li>The ISP and organization's name</li>
+                <li>The IP's host name</li>
+                <li>The country it's in</li>
+                <li>The region/state</li>
+                <li>The city (see below)</li>
+                <li>The latitude and longitude of the location (a best guess)</li>
+                <li>The area code for that region</li>
+                <li>Any known services running on that IP</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h3>What you won't get</h3>
+              <hr />
+              <ul class="list-display">
+                <li>Exact physical address</li>
+                <li>Exact name of the person who owns that IP address</li>
+                <li>Personal information of the person who owns that IP address</li>
+                <li>A phone number</li>
+                <li>An email address</li>
+                <li>IP addresses that are currently unallocated to any specific organization</li>
+                <li>IP addresses that are reserved for loopback, private network, multicast, or link-local use</li>
+              </ul>
+            </div>
+
+            <!-- About IPv4-6-->
+
+            <section id="about IPv4-6" class="scroll">
+              <hr />
+              <h2>CyberNet Detective lets you know if you are using IPv6 or IPv4</h2>
+              <br>
+            </section>
+            <section>
+              <div class="container clearfix">
+                <img class="col-5 col-sm-5 col-md-5 float-start mb-4 mt-1 me-3"
+                  src="assets/Images/Concept business meeting.PNG" alt="About IPv4-6 image" />
+                <p>
+                  We are perhaps the one of the few IP lookup websites that is prepared to show visitors an IPv6 address
+                  if one is detected.
+                  That is why CyberNet Detective is truly one of the leading IP lookup websites on the internet.
+                  It is always up and running and able to show you your active, public-facing IP address on demand.
+                <p>
+                  We also have a number of other tools that you can use to learn more about the domain name, such as the
+                  domain age, DNS records, and the history of the domain,
+                  so you can see if it has changed hands and what it was used for in the past.
+                <p>
+                  Why don’t you go to the IP Tracker form at the top of this page right now and see what type of
+                  IP address is active for your connection...and what it is.
+                </p>
+                <br />
+                <b>We are here to help you understand the world of IP addresses, not make it more confusing.
+                  If you have any questions about IP addresses, please feel free to contact us.</b>
+                </p>
+              </div>
+            </section>
+          </main>
+
+     <!-- CONTACT SECTION-->
+  <footer>
+    <section id="contact" class="scroll">
+      <hr />
+      <a href="Contact.html" target="_blank">
+      <h2>Contact Us</h2>
+    </section>
+    <div class="container p-3 gap-2 d-grid d-md-flex flex-row flex-wrap justify-content-around">
+      <a href="tel:+5555555555" class="btn btn-light"><i class="fa fa-phone-square" aria-hidden="true"></i>
+        +(44)555-5555</a>
+      <a href="mailto:CyberNetDetective@website.com" class="btn btn-light"><i class="fa fa-envelope-square"
+          aria-hidden="true"></i>info@CyberNetDetective.com</a>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
+          class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
+          class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
+          class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+    </div> 
+   
+
+  <footer>
+    <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
+  </footer>
+
+  <!-- CONTAINER END -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
