@@ -127,6 +127,7 @@ function ipDetails(ip){
         var map = "https://maps.googleapis.com/maps/api/staticmap?center="+ lan +","+ lon +"&zoom=12&size=300x300&key=AIzaSyCOQkNEyO14HP3c0qqf-C8_SI8pIX3nNN8"
     
         var mapImg = $("<img>").attr('src', map)
+        mapImg.attr('id', 'gmap')
         $(".map-container").append(mapImg);  
     });
     
