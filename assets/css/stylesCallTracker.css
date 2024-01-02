@@ -16,6 +16,12 @@
   text-align: center;
 }
 
+.head-container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 h3 {
   font-size: 1.75rem;
   color: #042c75;
@@ -30,34 +36,46 @@ h3 {
     padding: 0;
 }
 
-.head-container{
-    display: flex;
-    text-align: center;
+.row{
+  display: flex;
+  margin: 40px;
+  padding: 20px;;
+
 }
 
 .input-group{
-    width: 100px;
+    width: 400px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 20px;
 }
 
 .input-group button{
-    width: 100px;
+    width: 200px;
     padding: 0;
     cursor: pointer;
-    border: none;
+    border: black;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #125de9;
     margin: 10px;
 }
 
+.input-group .reset{
+  background-color: grey;
+}
+
 .input-group .separator{
+    display: flex;
+    justify-content: center;
     height: 10px;
-    width: 100px;
+    width: 200px;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .history-search{
@@ -95,6 +113,7 @@ color: #125de9;
     padding: 30px;
     clear: both;
     text-align: center;
+    background-color:  #343a40;
   }
   
   footer h3 {
