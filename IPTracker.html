@@ -27,10 +27,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          There are limits to how you may use CyberNet Detective reports. 
+          There are limits to how you may use CyberNet Detective reports.
           Please review the box below to continue to your report.
           I will not use information provided by CyberNet Detective for decisions about employment,
-          insurance, tenant screening, consumer credit or any other purpose requiring the General Data Protection Regulation (GDPR)
+          insurance, tenant screening, consumer credit or any other purpose requiring the General Data Protection
+          Regulation (GDPR)
           and the Fair Credit Reporting Act (FCRA) compliance.
         </div>
         <div class="modal-footer">
@@ -163,58 +164,122 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary closeMod" data-dismiss="modal" >Close</button>
+          <button type="button" class="btn btn-secondary closeMod" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
-<!-- ABOUT IP TRACKER-->
-<main>
-  <section id="about" class="scroll">
-    <hr />
-    <h2>How to get someone's IP address</h2>
-  </section>
-  <section>
-    <div class="container clearfix">
-      <img class="col-5 col-sm-3 col-md-3 float-start mb-3 mt-4 me-3" src="assets/Images/future-robot-cyborg.jpg"
-        alt="About IP Tracker image" />
-      <p>
-        <br>
-        <b>Using the Command Prompt.</b>
-        On Windows devices, you can find an IP address for a website with the command prompt. 
-        It’s easiest to find the command prompt from the search box in the Start menu. 
-        For Mac devices, the application is known as Terminal and is found in the Utilities folder. 
-        Once you’ve located the command prompt, open it and you’ll see a black DOS screen appear. 
-        Now, you can use a ping to find the IP address. A ping will attempt to establish a connection between
-        your device and the one with the IP address you’re looking for.        
-        On the command prompt screen, type the words “ping host address,” where “host address” equals the address of the website you’re looking to trace, and hit Enter. 
-        For example, if you want to find the IP address of Facebook, you would type the words “ping www.facebook.com” and then press enter. 
-        Now, your computer will try to find the server for that site. If it’s successful, the IP address you’re searching for will appear!
-      
-      <p>
-        <b>Examine the Header of an Incoming Email.</b>
-        An email is one of the best places to check. IP address information can be found using a function embedded in most email programs. 
-        This method varies depending on the type of email service or program you’re using.
-        The “headers” information is the most important thing to look for. There should be an option called “Internet headers” or simply “headers” in the settings of your email program. 
-        Turning on this option displays a new range of data on your messages, including the sender’s IP address.
+  <!-- ABOUT IP TRACKER-->
+  <main>
+    <section id="about" class="scroll">
+      <hr />
+      <h2>How to get someone's IP address</h2>
+    </section>
+    <section>
+      <div class="container clearfix">
+        <img class="col-5 col-sm-3 col-md-3 float-start mb-3 mt-4 me-3" src="assets/Images/future-robot-cyborg.jpg"
+          alt="About IP Tracker image" />
+        <p>
+          <br>
+          <b>Using the Command Prompt.</b>
+          On Windows devices, you can find an IP address for a website with the command prompt.
+          It is easiest to find the command prompt from the search box in the Start menu.
+          For Mac devices, the application is known as Terminal and is found in the Utilities folder.
+          Once you have located the command prompt, open it and you will see a black DOS screen appear.
+          Now, you can use a ping to find the IP address. A ping will attempt to establish a connection between
+          your device and the one with the IP address you are looking for.
+          On the command prompt screen, type the words “ping host address,” where “host address” equals the address of
+          the website you’re looking to trace, and hit Enter.
+          For example, if you want to find the IP address of Facebook, you would type the words “ping www.facebook.com”
+          and then press enter.
+          Now, your computer will try to find the server for that site. If it’s successful, the IP address you’re
+          searching for will appear!
 
-      <p>
-        It’s crucial to remember that header information can’t always be trusted.
-        In fact, it can be fake! So whenever you find an IP address using this method, 
-        perform an IP check by using the command prompt to ping the address and confirm its validity.
-      </p>
-      <br />
-      <h2>What you will get with this tool</h2>
+        <p>
+          <b>Examine the Header of an Incoming Email.</b>
+          An email is one of the best places to check. IP address information can be found using a function embedded in
+          most email programs.
+          This method varies depending on the type of email service or program you are using.
+          The “headers” information is the most important thing to look for. There should be an option called “Internet
+          headers” or simply “headers” in the settings of your email program.
+          Turning on this option displays a new range of data on your messages, including the sender’s IP address.
 
+        <p>
+          It’s crucial to remember that header information can’t always be trusted.
+          In fact, it can be fake! So whenever you find an IP address using this method,
+          perform an IP check by using the command prompt to ping the address and confirm its validity.
+        </p>
+        <br />
 
-      </p>
-    </div>
-  </section>
+        <!-- Listed items section-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <h3>What you will get with this tool</h3>
+              <hr />
+              <ul class="list-display list-checkmarks">
+                <li>The ISP and organization's name</li>
+                <li>The IP's host name</li>
+                <li>The country it's in</li>
+                <li>The region/state</li>
+                <li>The city (see below)</li>
+                <li>The latitude and longitude of the location (a best guess)</li>
+                <li>The area code for that region</li>
+                <li>Any known services running on that IP</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h3>What you won't get</h3>
+              <hr />
+              <ul class="list-display">
+                <li>Exact physical address</li>
+                <li>Exact name of the person who owns that IP address</li>
+                <li>Personal information of the person who owns that IP address</li>
+                <li>A phone number</li>
+                <li>An email address</li>
+                <li>IP addresses that are currently unallocated to any specific organization</li>
+                <li>IP addresses that are reserved for loopback, private network, multicast, or link-local use</li>
+              </ul>
+            </div>
 
+            <!-- About IPv4-6-->
 
-      
+            <section id="about IPv4-6" class="scroll">
+              <hr />
+              <h2>CyberNet Detective lets you know if you are using IPv6 or IPv4</h2>
+              <br>
+            </section>
+            <section>
+              <div class="container clearfix">
+                <img class="col-5 col-sm-5 col-md-5 float-start mb-4 mt-1 me-3"
+                  src="assets/Images/Concept business meeting.PNG" alt="About IPv4-6 image" />
+                <p>
+                  We are perhaps the one of the few IP lookup websites that is prepared to show visitors an IPv6 address
+                  if one is detected.
+                  That is why CyberNet Detective is truly one of the leading IP lookup websites on the internet.
+                  It is always up and running and able to show you your active, public-facing IP address on demand.
+                <p>
+                  We also have a number of other tools that you can use to learn more about the domain name, such as the
+                  domain age, DNS records, and the history of the domain,
+                  so you can see if it has changed hands and what it was used for in the past.
+                <p>
+                  Why don’t you go to the IP Tracker form at the top of this page right now and see what type of
+                  IP address is active for your connection...and what it is.
+                </p>
+                <br />
+                <b>We are here to help you understand the world of IP addresses, not make it more confusing.
+                  If you have any questions about IP addresses, please feel free to contact us.</b>
+                </p>
+              </div>
+            </section>
+          </div>
 
+  <footer>
+    <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
+  </footer>
+
+  <!-- CONTAINER END -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
