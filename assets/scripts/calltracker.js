@@ -6,14 +6,21 @@ async function getData() {
     const settings = {
       async: true,
       crossDomain: true,
-      url: `https://truecaller4.p.rapidapi.com/api/v1/getDetails?phone=${number}&countryCode=${countryCode}`,
-      method: "GET",
+      url: "https://true_caller-api.p.rapidapi.com/",
+      method: "POST",
       headers: {
         "X-RapidAPI-Key": "a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb",
         "X-RapidAPI-Host": "truecaller4.p.rapidapi.com",
       },
+      processData: false,
+      data:
+        '{\n    "number": "' +
+        number +
+        '",\n    "country_code": "' +
+        countryCode +
+        '"}',
     };
-
+    console.log(settings.data);
     $.ajax(settings).done(function (response) {
       // console.log(response.timestamp, response.data[0].spamInfo, response);
       var data = response.data[0].spamInfo.spamType
@@ -27,6 +34,9 @@ $(("#reset-button")).click(function () {
   localStorage.clear();
 });
 getData();
+
+
+
 
 // key1 = e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e;
 // key2 = a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb
