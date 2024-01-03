@@ -15,13 +15,13 @@
 
 ### The Challenge
 
-- This repository is about creating an application to track an IP address, called 'IP Tracker' and reverse call lookup, named 'Call Tracker'. This is our first group project for our web development program. 
+- This repository is about creating an interactive front-end called CyberNet Detective. The functionality of the app is to track an IP address and reverse call lookup. This is our first group project for our web development program. 
   
-- Built an interactive front-end application called CyberNet Detective. The cyber security APIs we've used helped us create 'Call Tracker' and 'IP Tracker' which provide easy access to extensive data from reputable sources such as public records information, government database and Satellite(SAT) data.  The 'IP Tracker' shows visitors if they are using IPv4 or IPv6 address if one is detected. IP location is a powerful advertising tool for online businesses as it can help analise customer behavior and show relevant advertisments based on customer preferences.
+- The cyber security APIs we've used helped us create 'Call Tracker' and 'IP Tracker' which provide easy access to extensive data from reputable sources such as public records information, government database and Satellite(SAT) data.  The 'IP Tracker' shows visitors if they are using IPv4 or IPv6 address if one is detected. IP location is a powerful advertising tool for online businesses as it can help analise customer behavior and show relevant advertisments based on customer preferences.
 
 - The app unlocks new possibilities in geolocation, geofencing in websites, detecting fraudulent activity, improving marketing ROI, helps with price and currency optimisation and automatic form filling. As a result it can help businesses with sales and revenue. Can help arm you against telemarketers and robocalls. Better user experience on websites will lead to better user engagement.
 
-- The CyberNet Detective application will give detailed information about an IP address and search who called or texted with reverse phone lookup. It can help find who is behind a phone number or IP address, search for contact information and not the least to protect from spammers, scammers and frauds. The user has the ability to input a phone number or an IP address. The final report and search results will produce a list of IP and caller's data (including spam detection) that are applicable. Just to name a few, additional functionality includes a map identifying the location results, any aliases used by them, any known services running on that IP, the area code for that region, the country it's in, and a responsive interface.
+- The CyberNet Detective application will give detailed information about an IP address and search who called or texted by using reverse phone lookup. It can help find who is behind a phone number or IP address, search for contact information and not the least to protect from spammers, scammers and frauds. The user has the ability to input a phone number or an IP address. The final report and search results will produce a list of IP and caller's data (including spam detection) that are applicable. Just to name a few, additional functionality includes a map identifying the location results, any aliases used by them, any known services running on that IP, the area code for that region, the country it's in, and a responsive interface.
 
 - This app will run in the browser and feature dynamically updated Bootstrap, HTML and CSS powered by JavaScript code and APIs. It will have a clean, polished, and responsive user interface. 
   
@@ -63,7 +63,7 @@
 
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-* Using GitHub Project to track the status of your project tasks will help you understand the benefits of Kanban boards.
+* Using GitHub Project to track the status of the project tasks will helps to understand the benefits of Kanban boards.
 
 * To implement feature and bug fixes using Git branch workflow and pull requests.
 
@@ -94,11 +94,11 @@
 
 ### Using the app
 
-- To begin using the app, type the phone number or the IP address you would like to find more information. On our page 'IP Tracker' we've explained in detail on how to locate an IP address in order to input it in the form. Click the button "Get IP details" or "Search" button to generate the report. A modal stating that the 'Results are ready' will appear, asking for the client's agreement with the Terms of use. 
+- To begin using the app, type the phone number or the IP address in order to find more information. On our page 'IP Tracker' we've explained in detail how to locate an IP address so you can input it in the form. Click the button "Get IP details" or "Search" button to generate the report. A modal stating that the 'Results are ready' will appear, asking for the client's agreement with the Terms of use. 
 
-Ip Tracker - A short report will be given on the left hand side. For a more extensive report at the bottom of the form is located a button called 'Details' which will generate further twenty four data resources.
+  - 'Ip Tracker' - A short report will be given on the left hand side. For a more extensive report scroll to the bottom of the 'IP Tracker' form where is located a button called 'Details'. A click will generate further twenty four data resources.
 
-Call Tracker - A phone number and a country code are required in order to generate the search. Press on the "Search " button to see the results.
+  - 'Call Tracker' - A phone number and a country code are required in order to generate the search. Press on the "Search " button to see the results.
 
 ## Authors
 
