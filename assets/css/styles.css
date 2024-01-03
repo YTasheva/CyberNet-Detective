@@ -48,6 +48,11 @@ body {
     color: #042c75;
   }
 
+  h4 {
+    font-size: 1.30rem;
+    color: #042c75;
+  }
+
   /* .footer --> footer */
   footer {
     padding: 30px;
