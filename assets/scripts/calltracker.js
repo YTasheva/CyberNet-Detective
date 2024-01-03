@@ -19,7 +19,7 @@ async function getData() {
       var data = response.data[0].spamInfo.spamType
       localStorage.setItem("spam-info", data)
       var storedData = localStorage.getItem("spam-info")
-      $(".searh-list").text(storedData)
+      $(".search-list").text(storedData)
     });
   });
 }
