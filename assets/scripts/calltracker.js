@@ -9,7 +9,7 @@ async function getData() {
       url: `https://truecaller4.p.rapidapi.com/api/v1/getDetails?phone=${number}&countryCode=${countryCode}`,
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "6ddaa51237mshe5dca3f57aaf9eap1694c4jsnc5f95fdfc5c3",
+        "X-RapidAPI-Key": "a4a9148c55mshd51a0247b343d9ep18b62ejsn9b26d87bdecb",
         "X-RapidAPI-Host": "truecaller4.p.rapidapi.com",
       },
     };
