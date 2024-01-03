@@ -20,9 +20,9 @@ $(function () {
             var iPv6 =  /^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/;
 
             if (ipv4.test(ip) || iPv6.test(ip)) {
+                $('#trueValue').text('');
                 getIP(ip);
                 ipDetails(ip);
-                
             }
             else {
                 $('#trueValue').text('Not a real IP address');

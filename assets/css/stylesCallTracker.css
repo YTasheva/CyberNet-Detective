@@ -107,6 +107,10 @@ a:hover {
   margin: 0 10px 0 -28px;
   color: #125de9;
 }
+.form-group {
+  display: flex;
+  justify-content: center;
+}
 
 /* .footer --> footer */
 footer {
