@@ -9,7 +9,7 @@
   - [Links](#links)
   - [Built With](#built-with)
   - [Using the app](#Using-the-app)
-- [Author](#author)
+- [Authors](#authors)
 
 ## Overview
 
@@ -21,7 +21,7 @@
 
   - The 'IP Tracker' shows visitors if they are using IPv4 or IPv6 address if one is detected. 
 
-  - IP location is a powerful advertising tool for online businesses as it can help analyse customer behaviuor and show relevant advertisements based on customer preferences.
+  - IP location is a powerful advertising tool for online businesses as it can help analyse customer behaviour and show relevant advertisements based on customer preferences.
 
 - The app unlocks new possibilities and can help businesses with:
 
@@ -29,9 +29,9 @@
   - geofencing in websites
   - detecting fraudulent activity
   - improving marketing ROI
-  - price and currency optimisation and automatic form filling. 
+  - price and currency optimisation and automatic form filling 
   - sales and revenue. 
-  - arm against telemarketers and robocalls. 
+  - arm against telemarketers and robocalls 
 
 - Better user experience on websites will lead to better user engagement.
 
@@ -39,12 +39,13 @@
 
 - The user has the ability to input a phone number or an IP address. The final report and search results will produce a list of IP and caller's data (including spam detection) that are applicable. 
 
-- Just to name a few, additional functionality includes:
- -  a map identifying the location results
- - any aliases used by them
- - any known services running on that IP
- - the area code for that region
- - the country it's in
+- Additional functionality includes, just to name a few:
+
+  -  a map identifying the location results
+  - any aliases used by them
+  - any known services running on that IP
+  - the area code for that region
+  - the country it's in
 
 - This app will run in the browser and feature dynamically updated Bootstrap, HTML and CSS powered by JavaScript code and APIs. It will have a clean, polished, and responsive user interface. 
   
