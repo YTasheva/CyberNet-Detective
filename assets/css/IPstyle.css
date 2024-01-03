@@ -96,6 +96,87 @@ h3 {
   color: #125de9;
   }
   
+/* Modal Styles */
+.modal {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  max-width: 70%;
+}
+
+.modal-content {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 30px;
+  text-align: left;
+}
+
+.modal-header {
+  background-color: #f2f2f2;
+}
+
+.modal-footer {
+  background-color: #f2f2f2;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .modal-dialog {
+      max-width: 90%;
+  }
+}
+
+/* Close button in the modal */
+.closeMod {
+  font-size: 12px; 
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; 
+  border: 1px solid #007bff;
+  padding: 6px 12px; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the closeMod button */
+.closeMod:hover {
+  background-color: #0056b3; 
+  border-color: #0056b3;
+  color: #fff;
+}
+
+/* Table styles in the modal body */
+.modal-body table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+}
+
+.modal-body th, .modal-body td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-body th {
+  background-color: #f2f2f2;
+}
+
+
+.modal-body tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+.modal-body tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
 
 /* .footer --> footer */
 footer {
