@@ -15,13 +15,36 @@
 
 ### The Challenge
 
-- This repository is about creating an interactive front-end called CyberNet Detective. The functionality of the app is to track an IP address and reverse call lookup. This is our first group project for our web development program. 
+- This repository is about creating an interactive front-end application called CyberNet Detective. The functionality of the app is to track an IP address and Reverse call lookup. This is our first group project for our web development program. 
   
-- The cyber security APIs we've used helped us create 'Call Tracker' and 'IP Tracker' which provide easy access to extensive data from reputable sources such as public records information, government database and Satellite(SAT) data.  The 'IP Tracker' shows visitors if they are using IPv4 or IPv6 address if one is detected. IP location is a powerful advertising tool for online businesses as it can help analise customer behavior and show relevant advertisments based on customer preferences.
+- The cyber security APIs we've used helped us create 'Call Tracker' and 'IP Tracker' which provide easy access to an extensive data from reputable sources such as public records information, government database and Satellite(SAT) data.  
 
-- The app unlocks new possibilities in geolocation, geofencing in websites, detecting fraudulent activity, improving marketing ROI, helps with price and currency optimisation and automatic form filling. As a result it can help businesses with sales and revenue. Can help arm you against telemarketers and robocalls. Better user experience on websites will lead to better user engagement.
+  - The 'IP Tracker' shows visitors if they are using IPv4 or IPv6 address if one is detected. 
 
-- The CyberNet Detective application will give detailed information about an IP address and search who called or texted by using reverse phone lookup. It can help find who is behind a phone number or IP address, search for contact information and not the least to protect from spammers, scammers and frauds. The user has the ability to input a phone number or an IP address. The final report and search results will produce a list of IP and caller's data (including spam detection) that are applicable. Just to name a few, additional functionality includes a map identifying the location results, any aliases used by them, any known services running on that IP, the area code for that region, the country it's in, and a responsive interface.
+  - IP location is a powerful advertising tool for online businesses as it can help analyse customer behaviuor and show relevant advertisements based on customer preferences.
+
+- The app unlocks new possibilities and can help businesses with:
+
+  - geolocation
+  - geofencing in websites
+  - detecting fraudulent activity
+  - improving marketing ROI
+  - price and currency optimisation and automatic form filling. 
+  - sales and revenue. 
+  - arm against telemarketers and robocalls. 
+
+- Better user experience on websites will lead to better user engagement.
+
+- The CyberNet Detective application will give you detailed information about an IP address and search who called or texted by using reverse phone lookup. It can help find who is behind a phone number or IP address, search for contact information and not the least to protect from spammers, scammers and frauds. 
+
+- The user has the ability to input a phone number or an IP address. The final report and search results will produce a list of IP and caller's data (including spam detection) that are applicable. 
+
+- Just to name a few, additional functionality includes:
+ -  a map identifying the location results
+ - any aliases used by them
+ - any known services running on that IP
+ - the area code for that region
+ - the country it's in
 
 - This app will run in the browser and feature dynamically updated Bootstrap, HTML and CSS powered by JavaScript code and APIs. It will have a clean, polished, and responsive user interface. 
   
