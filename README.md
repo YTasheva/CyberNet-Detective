@@ -105,6 +105,7 @@
  
 ### Screenshot
 
+<img width="1497" alt="Screenshot Bootstrap1" src="https://github.com/YTasheva/CyberNet-Detective/blob/main/assets/Images/CyberNet%20Recording.gif">
 
 
 ### Links
