@@ -127,4 +127,4 @@
 
 ## Authors
 
-- Github - [Yuliya Tasheva](https://github.com/YTasheva); [Joshua Mendoza](https://github.com/josh484); [Enkhbat Baatar](https://github.com/enx-code); [Kevin Dsouza](https://github.com/KevinDsouza7); [Moses Opiah](https://github.com/Moe-op); [Francisco Ruiz](https://github.com/FJCR87);
+- Github - [Yuliya Tasheva](https://github.com/YTasheva); [Joshua Mendoza](https://github.com/josh484); [Enkhbat Baatar](https://github.com/enx-code); [Kevin Dsouza](https://github.com/KevinDsouza7); [Francisco Ruiz](https://github.com/FJCR87);
