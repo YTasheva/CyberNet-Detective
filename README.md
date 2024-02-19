@@ -120,8 +120,8 @@
 
 ### Links
 
-- Solution URL: https://github.com/josh484/Cyber-security
-- Live Site URL: https://josh484.github.io/Cyber-security//
+- [Solution URL](https://github.com/josh484/Cyber-security)
+- [Live Site URL](https://josh484.github.io/Cyber-security//)
   
 ### Built With
 
