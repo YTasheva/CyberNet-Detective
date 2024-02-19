@@ -26,6 +26,25 @@ h3 {
   color: #042c75;
 }
 
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  background-color: #fff;
+  width: 60%;
+  margin:auto;
+}
+
+.form-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .mask {
   background-color: rgba(0, 0, 0, 0.229);
 }
