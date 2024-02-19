@@ -1,4 +1,14 @@
-# Cyber-security
+<h1 align="center">Cyber-security</h1>
+  <br>
+  <a href="https://github.com/YTasheva">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=for-thebadge" alt=""></a>
+  <a href="https://github.com/YTasheva/Cyber-security/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/YTasheva/Cyber-security.svg?style=for-the-badge" alt=""></a>
+  <a href="https://github.com/YTasheva/Cyber-security/issues">
+      <img src="https://img.shields.io/github/issues/YTasheva/Cyber-security.svg?style=for-the-badge" alt=""></a>
+  <a href="https://github.com/YTasheva/Cyber-security/network/members">
+      <img src="https://img.shields.io/github/forks/YTasheva/Cyber-security.svg?style=for-the-badge" alt=""></a>
+      
 
 ## Table of contents
 
