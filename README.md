@@ -1,4 +1,4 @@
-<h1 align="center">Cyber-security</h1>
+<h1 align="center">CyberNet-Detective</h1>
   <br>
   <a href="https://github.com/YTasheva">
       <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=for-thebadge" alt=""></a>
