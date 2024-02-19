@@ -18,6 +18,31 @@
 </head>
 
 <body>
+
+  <!-- Modal -->
+  <div class="modal" id="terms" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">YOUR RESULTS ARE READY</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          There are limits to how you may use CyberNet Detective reports.
+          Please review the box below to continue to your report.
+          I will not use information provided by CyberNet Detective for decisions about employment,
+          insurance, tenant screening, consumer credit or any other purpose requiring the General Data Protection
+          Regulation (GDPR)
+          and the Fair Credit Reporting Act (FCRA) compliance.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cMode">Close</button>
+          <button type="button" class="btn btn-primary" id="saveTerms">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MAIN LOGO / NAV -->
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -65,54 +90,25 @@
 
   </header>
 
-  <!-- Call Tracker Form -->
+  <!-- CALL TRACKER SECTION -->
   <main>
-    <section>
-
-      <section id="about" class="scroll">
-        <hr />
-        <h1>Call Tracker</h1>
-      </section>
-      <section>
-        <div class="container clearfix">
-          <img class="col-3 col-sm-2 col-md-2 float-start mb-1 mt-2 me-1" src="assets/Images/suspicius-number.jpg"
-            alt="About Call Tracker image" />
-          <p>
-            <br>
-            <b>CyberNet Call Tracker</b>
-            first gives you the welcome all the user to our phone number search tool to track unknows calls and solve
-            your uncertainty
-            behind those unknown calls. Our powefull call tracker is a great app to uncover information about unkown
-            caller before call the number back.
-          </p>
-          <p>
-            <b>How to used,</b>
-            you need to fill in the box with unknown number phone and the country code after click the search button to
-            found all the information about that’s number.
-          </p>
-          <br />
-          <div class="head-container">
-
-      </section>
-
-      <div class="container-fluid" style="max-width: 1400px">
+     <div class="container-fluid" style="max-width: 1400px">
         <div class="row">
-
-          <aside class="col-lg- pb-3">
+          <div class="col-lg- pb-3">
             <h2 id="form-heading" class="mt-1 h3 form-label">
-              Call Tracker Tool form.
+              Call Tracker
             </h2>
-            <h4>Insert the number phone in the box below:</h4>
+            <h4>Enter a phone number:</h4>
             <form id="search-form" class="form">
               <div class="form-inline form-group">
-                <div class="input-group">
-                  <input class="form-input-search" type="text" id="numberInput" placeholder="number phone"
-                    aria-labelledby="form-heading" aria-controls=" call search-input" />
+                <div class="input-group mb-3">
+                  <input class="form-input-search" type="text" id="number-input" placeholder="phone number"
+                    aria-labelledby="form-heading" aria-controls="call search-input" />
                   <div class="separator"></div>
-                  <input class="form-input-search" type="text" id="countryCode" placeholder="country code"
+                  <input class="form-input-search" type="text" id="country-code" placeholder="country code"
                     aria-labelledby="form-heading" aria-controls=" call search-input" />
                   <div class="">
-                    <button type="submit" class="search-button" id="search-button" aria-label="submit">
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#search" id="search-button" aria-label="submit">
                       Search</button>
                   <div class="separator">or</div>
                     <button type="submit" class="reset" id="reset-button" aria-label="submit">
@@ -121,11 +117,42 @@
                   <h3>This number: </h3>
                   <h3 class="search-list">
                   </h3> 
+
+                  <div class="map-container">
+                    <!-- Google Maps API -->
+                    <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                      style="border:0; height: 300px;" allowfullscreen>
+                    </iframe>
+                  </div>
                 </div>
               </div>
             </div>
-          </aside>
         </div>
+      </form>
+      
+<!-- MODAL -->
+        <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
+              <button type="button" class="close closeMod btn-primary" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="info">
+    
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary closeMod" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <!-- Norton Seal--> 
         
           <div class="column form-group">
@@ -209,7 +236,7 @@
                         </ul>
                       </div>
 
-                      <!-- About IPv4-6-->
+                      <!-- About Call Tracker-->
                       <section id="about IPv4-6" class="scroll">
                         <hr />
                         <h2>Satisfy your curiosity with our detailed reports</h2>
