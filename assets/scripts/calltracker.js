@@ -14,6 +14,22 @@ async function getData() {
       },
     };
 
+    /* Details Modal Show */
+    $('#search-button').on('click', function(event) {
+      $('#dsearch').modal('show');
+  });
+  /* Details Modal Close */
+  $('.closeMod').on('click', function(event) {
+      $('#search').modal('hide');
+  });
+  /* Terms Modal Close */
+  $('#cMode').on('click', function(event) {
+      $('#terms').modal('hide');
+  });
+  
+Call Tracker
+});
+
     $.ajax(settings).done(function (response) {
       var data = response.data[0].spamInfo.spamType;
       
