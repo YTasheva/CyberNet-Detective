@@ -1,7 +1,7 @@
 <h1 align="center">CyberNet-Detective</h1>
   <br>
   <a href="https://github.com/YTasheva">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=for-thebadge" alt=""></a>
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=for-the-badge" alt=""></a>
   <a href="https://github.com/YTasheva/CyberNet-Detective/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/YTasheva/cybernet-detective.svg?style=for-the-badge" alt=""></a>
   <a href="https://github.com/YTasheva/CyberNet-Detective/issues">
@@ -122,6 +122,7 @@
 
 - [Solution URL](https://github.com/josh484/Cyber-security)
 - [Live Site URL](https://josh484.github.io/Cyber-security//)
+- [Presentation Slides](https://docs.google.com/presentation/d/1I_WNV0jQYidl4fSwkvmmIzwbB3qQf8Q1-QmXXNocJ7s/edit?usp=sharing)
   
 ### Built With
 
