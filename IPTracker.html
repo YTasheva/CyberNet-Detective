@@ -47,7 +47,10 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CyberNet Detective</a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/Images/logo.jpg" alt="CyberNet Detective" class="brand-logo me-2">
+          <span>CyberNet Detective</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -92,60 +95,82 @@
 
 
 <!-- IP TRACKER SECTION-->
-  <div class="ip-container">
-    <div class="title">IP Tracker</div>
+  <main class="py-5">
+    <div class="container" style="max-width: 1200px;">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="card ip-card shadow border-0 h-100">
+            <div class="card-body p-4">
+              <p class="text-uppercase small text-primary fw-semibold mb-2">Geo lookup</p>
+              <h2 class="h3 mb-1">IP Tracker</h2>
+              <p class="text-muted">Enter an IPv4 or IPv6 address to locate its network, region, and reputation.</p>
 
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Enter IP Address" id="search-input">
-      <div class="input-group-append">
-        <button class="btn btn-primary" id="search-button" type="button">Get IP Details</button>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa fa-globe"></i></span>
+                <input type="text" class="form-control" placeholder="Enter IP address (e.g. 8.8.8.8)" id="search-input" aria-label="IP address">
+              </div>
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                <button class="btn btn-primary" id="search-button" type="button">Get IP Details</button>
+                <button class="btn btn-outline-secondary" id="reset-button" type="button">Reset</button>
+                <span class="small text-muted ms-2">We only show public information.</span>
+              </div>
+              <p class="small text-muted" id="trueValue"></p>
+              <p class="small mt-2 mb-0 text-muted" id="search-status"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card shadow-lg border-0 h-100 map-card">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="h5 mb-0">Live location preview</h3>
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle">Map updates on lookup</span>
+              </div>
+              <div class="map-container rounded overflow-hidden shadow-sm mb-3">
+                <iframe src="https://maps.google.com/maps?q=london&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0; height: 260px; width: 100%;" allowfullscreen></iframe>
+              </div>
+              <table class="info-table mb-3">
+                <tr>
+                  <th>Internet Service Provider</th>
+                  <td id="isp">Community Fibre Limited</td>
+                </tr>
+                <tr>
+                  <th>Country</th>
+                  <td id="country">United Kingdom</td>
+                </tr>
+                <tr>
+                  <th>City</th>
+                  <td id="city">London</td>
+                </tr>
+                <tr>
+                  <th>Hostname</th>
+                  <td id="host">-</td>
+                </tr>
+                <tr>
+                  <th>Region/State</th>
+                  <td id="region">Wandsworth</td>
+                </tr>
+                <tr>
+                  <th>Area Code</th>
+                  <td id="regCode">—</td>
+                </tr>
+                <tr>
+                  <th>More Details</th>
+                  <td>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#details" id="modalB">
+                      Details
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <p id="trueValue"> </p>
-
-    <div class="map-container">
-<!-- Google Maps API -->
-<iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-  style="border:0; height: 300px;" allowfullscreen>
-</iframe>
-    </div>
-
-    <table class="info-table">
-      <tr>
-        <th>Internet Service Provider</th>
-        <td id="isp">Community Fibre Limited</td>
-      </tr>
-      <tr>
-        <th>Country</th>
-        <td id="country">United Kingdom</td>
-      </tr>
-      <tr>
-        <th>City</th>
-        <td id="city">London</td>
-      </tr>
-      <tr>
-        <th>Hostname</th>
-        <td id="host">-</td>
-      </tr>
-      <tr>
-        <th>Region/State</th>
-        <td id="region">Wandsworth</td>
-      </tr>
-      <tr>
-        <th>Area Code</th>
-        <td id="regCode"> </td>
-      </tr>
-      <tr>
-        <th>More Details</th>
-        <td>
-    <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details" id="modalB">
-            Details
-          </button>
-        </td>
-      </tr>
-    </table>
-  </div>
+  </main>
 
 <!-- Modal -->
   <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
@@ -154,9 +179,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
-          <button type="button" class="close closeMod btn-primary" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="btn-close closeMod" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <table id="info">
@@ -164,7 +187,7 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary closeMod" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary closeMod" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -174,7 +197,7 @@
   <div class="column">
     <div class="column p-5 text-center bg-image">
       <figure class="image">
-        <img src="./assets/Images/norton_secure_seal.png" height="30" alt="">
+        <img src="./assets/Images/norton_secure_seal.png" height="30" alt="" loading="lazy">
       </figure>
     </div>
   </div>
@@ -188,7 +211,7 @@
     <section>
       <div class="container clearfix">
         <img class="col-5 col-sm-3 col-md-3 float-start mb-3 mt-4 me-3" src="assets/Images/future-robot-cyborg.jpg"
-          alt="About IP Tracker image" />
+          alt="About IP Tracker image" loading="lazy" />
         <p>
           <br>
           <b>Using the Command Prompt.</b>
@@ -262,7 +285,7 @@
             <section>
               <div class="container clearfix">
                 <img class="col-5 col-sm-5 col-md-5 float-start mb-4 mt-1 me-3"
-                  src="assets/Images/Concept business meeting.PNG" alt="About IPv4-6 image" />
+                  src="assets/Images/Concept business meeting.PNG" alt="About IPv4-6 image" loading="lazy" />
                 <p>
                   We are perhaps the one of the few IP lookup websites that is prepared to show visitors an IPv6 address
                   if one is detected.
@@ -285,28 +308,36 @@
           </main>
 
      <!-- CONTACT SECTION-->
-  <footer>
-    <section id="contact" class="scroll">
-      <hr />
-      <a href="Contact.html" target="_blank">
-      <h2>Contact Us</h2>
-    </section>
-    <div class="container p-3 gap-2 d-grid d-md-flex flex-row flex-wrap justify-content-around">
-      <a href="tel:+5555555555" class="btn btn-light"><i class="fa fa-phone-square" aria-hidden="true"></i>
-        +(44)555-5555</a>
-      <a href="mailto:CyberNetDetective@website.com" class="btn btn-light"><i class="fa fa-envelope-square"
-          aria-hidden="true"></i>info@CyberNetDetective.com</a>
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
-    </div> 
-   
-
-  <footer>
-    <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
+  <footer class="site-footer mt-5">
+    <div class="container py-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-brand d-flex align-items-center justify-content-center justify-content-md-start">
+            <i class="fa fa-shield text-primary me-2" aria-hidden="true"></i>
+            <span>CyberNet Detective</span>
+          </div>
+          <p class="small text-secondary mb-0">Investigate smarter with privacy-first lookup tools.</p>
+        </div>
+        <div class="col-md-5">
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+            <a href="tel:+5555555555" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-phone me-2" aria-hidden="true"></i>Call us</a>
+            <a href="mailto:CyberNetDetective@website.com" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-envelope me-2" aria-hidden="true"></i>Email</a>
+            <a href="Contact.html" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-comment-dots me-2" aria-hidden="true"></i>Contact form</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3 social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 footer-bottom">
+        <small class="mb-0 text-secondary">© <span class="current-year"></span> CyberNet Detective. All rights reserved.</small>
+        <small class="mb-0 text-secondary">Built for fast, confident investigations.</small>
+      </div>
+    </div>
   </footer>
 
   <!-- CONTAINER END -->
@@ -314,6 +345,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/scripts/iptracker.js"></script>
+  <script src="./assets/scripts/footer.js"></script>
 </body>
 
 </html>
