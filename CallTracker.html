@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="CyberNet Detective" />
+  <meta name="author" content="Yuliya Tasheva" />
   <meta name="description" content="Call Tracker" />
   <title>Call Tracker</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -47,7 +47,10 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CyberNet Detective</a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/Images/logo.jpg" alt="CyberNet Detective" class="brand-logo me-2">
+          <span>CyberNet Detective</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,8 +79,8 @@
 
     <!-- JUMBOTRON HERO -->
     <div class="bannerip p-5 text-center bg-image rounded-3">
-      <div class="mask">
-        <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="mask d-flex align-items-start">
+        <div class="d-flex justify-content-center align-items-start h-100 w-100 pt-4">
           <div class="text-white">
             <h1 class="mb-3 mt-3">Welcome to Call Tracker</h1>
           </div>
@@ -91,224 +94,258 @@
   </header>
 
   <!-- CALL TRACKER SECTION -->
-  <main>
-     <div class="container-fluid" style="max-width: 1400px">
-        <div class="row">
-          <div class="col-lg- pb-3">
-            <h2 id="form-heading" class="mt-1 h3 form-label">
-              Call Tracker
-            </h2>
-            <h4>Enter a phone number:</h4>
-            <form id="search-form" class="form">
-              <div class="form-inline form-group">
-                <div class="input-group mb-3">
-                  <input class="form-input-search" type="text" id="number-input" placeholder="phone number"
-                    aria-labelledby="form-heading" aria-controls="call search-input" />
-                  <div class="separator"></div>
-                  <input class="form-input-search" type="text" id="country-code" placeholder="country code"
-                    aria-labelledby="form-heading" aria-controls=" call search-input" />
-                  <div class="">
-                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#search" id="search-button" aria-label="submit">
-                      Search</button>
-                  <div class="separator">or</div>
-                    <button type="submit" class="reset" id="reset-button" aria-label="submit">
-                        Reset</button>
-                  <div class="history-search">
-                  <h3>This number: </h3>
-                  <h3 class="search-list">
-                  </h3> 
+  <main class="py-5">
+    <div class="container" style="max-width: 1200px;">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="card shadow border-0 form-card h-100">
+            <div class="card-body p-4">
+              <p class="text-uppercase small text-primary fw-semibold mb-2">Reverse lookup</p>
+              <h2 id="form-heading" class="h3 mb-1">Call Tracker</h2>
+              <p class="text-muted mb-4">Enter a phone number to check ownership and spam reputation in seconds.</p>
 
-                  <div class="map-container">
-                    <!-- Google Maps API -->
-                    <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                      style="border:0; height: 300px;" allowfullscreen>
-                    </iframe>
-                  </div>
+              <form id="search-form" novalidate>
+                <label class="form-label" for="number-input">Phone number</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                  <input class="form-control" type="tel" id="number-input" placeholder="e.g. 9175550123" aria-labelledby="form-heading number-input"
+                    aria-controls="call-search-input" required>
+                </div>
+
+                <label class="form-label" for="country-code">Country code</label>
+                <div class="input-group mb-4">
+                  <span class="input-group-text"><i class="fa fa-flag"></i></span>
+                  <input class="form-control" type="text" id="country-code" placeholder="e.g. US" aria-labelledby="form-heading country-code"
+                    aria-controls="call-search-input" maxlength="5">
+                </div>
+
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                  <button type="submit" class="btn btn-primary" id="search-button" aria-label="Search number">
+                    Search now
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" id="reset-button" aria-label="Reset form">
+                    Reset
+                  </button>
+                  <span class="text-muted small ms-2">We only show publicly available information.</span>
+                </div>
+
+                <p class="small mt-3 mb-0 text-muted" id="search-status"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card shadow-lg border-0 h-100 info-card">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h3 class="h5 mb-0">Live check preview</h3>
+                <span class="badge bg-success-subtle text-success border border-success-subtle">Fast lookup</span>
+              </div>
+              <div class="history-search mb-3">
+                <p class="text-muted mb-1">Last spam signal</p>
+                <div class="d-flex align-items-center">
+                  <i class="fa fa-shield text-primary me-2"></i>
+                  <span class="fw-semibold search-list">No checks yet</span>
                 </div>
               </div>
-            </div>
-        </div>
-      </form>
-      
-<!-- MODAL -->
-        <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
-              <button type="button" class="close closeMod btn-primary" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <table id="info">
-    
-              </table>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary closeMod" data-dismiss="modal">Close</button>
+              <div class="map-container rounded overflow-hidden shadow-sm mb-3">
+                <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0; height: 260px; width: 100%;" allowfullscreen></iframe>
+              </div>
+              <ul class="list-display list-checkmarks mb-0">
+                <li>Owner name and aliases</li>
+                <li>Phone type and carrier</li>
+                <li>Region, city, and spam likelihood</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-        <!-- Norton Seal--> 
-        
-          <div class="column form-group">
-              <div class="column is-narrow privacy__norton">
-                <figure class="image">
-                  <img src="./assets/Images/norton_secure_seal.png" height="30" alt="">
-                </figure>
-              </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="search" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
+            <button type="button" class="btn-close closeMod" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-    </div>    
-            <!-- ABOUT CALL TRACKER-->
-            <main>
-              <section id="about" class="scroll">
-                <hr />
-                <h2>Why Use Reverse Phone Number Lookup?</h2>
-              </section>
-              <section>
-                <div class="container clearfix">
-                  <img class="col-5 col-sm-4 col-md-4 float-start mb-3 mt-4 me-3"
-                    src="assets/Images/Digital Professionals collage.PNG" alt="About Call Tracker image" />
-                  <p>
-                    <br>
-                    <b>CyberNet Detective Call Tracker</b>
-                    gives you the power to search billions of phone data points to try to find out who's
-                    behind those unknown calls. You might even uncover useful information about your caller, such as
-                    their address,
-                    age, email and social media profiles so you can decide whether to call the number back.
-                  <p>
-                    A reverse phone search works with all types of numbers, including cell phones and landlines, and
-                    with unpublished or unlisted numbers.
-                    Want to take the mystery out of your mystery caller? Our Reverse Phone Lookup can give you answers.
-                  <p>
-                    <b>How does Call Tracker Phone Number Search work?</b>
-                    With our reverse phone lookup tool, you can now simply type the caller’s number in the search bar
-                    above and
-                    find out who called you within seconds!
-                  <p>
-                    <b>The best part? Call Tracker also tells you if the caller is a spammer.</b>
-                  <p>
-                    A reverse phone search is a powerful tool that can help arm you against telemarketers, robocalls and
-                    phone scams.
-                    With robocalls and scams on the rise, there are always new ones to be on the lookout for.
-                    These usually involve you confirming personal details or giving the caller information to receive
-                    something of value.
-                    Others ask you to provide personal information to avoid getting into legal trouble.
-                  <p>
-                    Only give out your information to verified parties or organizations that you contact first (meaning
-                    you calling them).
-                    Never the other way around (them calling you).
-                    Instead, hang up and use Call Tracker’s free reverse phone lookup to find out who called.
-                  </p>
-                  <br />
+          <div class="modal-body">
+            <table id="info" class="table table-borderless small mb-0"></table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary closeMod" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                  <!-- Listed items section-->
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-6 col-sm-6">
-                        <h3>What you will get with this tool</h3>
-                        <hr />
-                        <ul class="list-display list-checkmarks">
-                          <li>The person or business that’s calling</li>
-                          <li>Phone carrier</li>
-                          <li>Phone type</li>
-                          <li>Any aliases used by them</li>
-                          <li>Current address, residence history and previously associated locations</li>
-                          <li>Spam detection</li>
-                          <li>The region/state</li>
-                          <li>The city (see below)</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6">
-                        <h3>What you won't get</h3>
-                        <hr />
-                        <ul class="list-display">
-                          <li>You won’t be able to see call logs</li>
-                          <li>Text messages</li>
-                          <li>Phone bills </li>
-                          <li>Other details about the phone used.</li>
-                          <li>All that is restricted to the phone carrier (like AT&T or Verizon)</li>
-                          <li>Anything that is not publicly available information.</li>
-                        </ul>
-                      </div>
+    <!-- Norton Seal-->
+    <div class="column form-group mt-4">
+      <div class="column is-narrow privacy__norton">
+        <figure class="image">
+          <img src="./assets/Images/norton_secure_seal.png" height="30" alt="Norton secure seal" loading="lazy">
+        </figure>
+      </div>
+    </div>
 
-                      <!-- About Call Tracker-->
-                      <section id="about IPv4-6" class="scroll">
-                        <hr />
-                        <h2>Satisfy your curiosity with our detailed reports</h2>
-                        <br>
-                      </section>
-                      <section>
-                        <div class="container clearfix">
-                          <img class="col-5 col-sm-5 col-md-5 float-start mb-4 mt-1 me-3"
-                            src="assets/Images/Women in tech.jpg" alt="About IPv4-6 image" />
-                          <p>
-                            <b>Being informed matters.</b>
-                            We are continuously updating our people search engine in an effort to provide you with
-                            accurate and robust information.
-                            That is why CyberNet Detective is truly one of the leading Reverse phone search websites on
-                            the internet.
-                            Our data is compiled from thousands of public records sources all over the world with
-                            frequent updates to reflect.
-                          <p>
-                            <b>Research Online Dates.</b>
-                            Catfishing, romance scams, unsafe predators. While online dating is a great way to expand
-                            your dating pool,
-                            it also exposes you to potential dangers. Stay safe with our reverse call lookup.
-                            Before meeting up with someone you met online, run a quick search on their phone number so
-                            you can make sure
-                            they match up with who their profile says they are.
-                          <p>
-                            <b>Identify the Owner of an Unknown Number.</b>
-                            Do you continuously get calls from an unknown number? Before blocking the number, consider
-                            looking up the phone number’s owner.
-                            You never know, it could be an old friend who changed their number or a long-lost family
-                            member you never met! If you don’t recognize the owner,
-                            you now have the information you need to take the best course of action.
-                          </p>
-                          <br />
-                          <b>Whether you want to reunite with your college roommate or learn more about the person your
-                            daughter is dating,
-                            CyberNet detective is your go-to resource for finding people.</b>
-                          </p>
-                        </div>
-                    </div>
-              </section>
-            </main>
-</body>
-<!-- CONTACT SECTION-->
+    <!-- ABOUT CALL TRACKER-->
+    <section id="about" class="scroll">
+      <hr />
+      <h2>Why Use Reverse Phone Number Lookup?</h2>
+    </section>
+    <section class="pb-5">
+      <div class="container clearfix">
+        <img class="col-5 col-sm-4 col-md-4 float-start mb-3 mt-4 me-3"
+          src="assets/Images/Digital Professionals collage.PNG" alt="About Call Tracker image" loading="lazy" />
+        <p>
+          <br>
+          <b>CyberNet Detective Call Tracker</b>
+          gives you the power to search billions of phone data points to try to find out who's
+          behind those unknown calls. You might even uncover useful information about your caller, such as
+          their address,
+          age, email and social media profiles so you can decide whether to call the number back.
+        <p>
+          A reverse phone search works with all types of numbers, including cell phones and landlines, and
+          with unpublished or unlisted numbers.
+          Want to take the mystery out of your mystery caller? Our Reverse Phone Lookup can give you answers.
+        <p>
+          <b>How does Call Tracker Phone Number Search work?</b>
+          With our reverse phone lookup tool, you can now simply type the caller’s number in the search bar
+          above and
+          find out who called you within seconds!
+        <p>
+          <b>The best part? Call Tracker also tells you if the caller is a spammer.</b>
+        <p>
+          A reverse phone search is a powerful tool that can help arm you against telemarketers, robocalls and
+          phone scams.
+          With robocalls and scams on the rise, there are always new ones to be on the lookout for.
+          These usually involve you confirming personal details or giving the caller information to receive
+          something of value.
+          Others ask you to provide personal information to avoid getting into legal trouble.
+        <p>
+          Only give out your information to verified parties or organizations that you contact first (meaning
+          you calling them).
+          Never the other way around (them calling you).
+          Instead, hang up and use Call Tracker’s free reverse phone lookup to find out who called.
+        </p>
+      </div>
+    </section>
 
-<section id="contact" class="scroll">
-  <hr />
-  <a href="Contact.html" target="_blank">
-    <h2>Contact Us</h2>
-</section>
-<div class="container p-3 gap-2 d-grid d-md-flex flex-row flex-wrap justify-content-around">
-  <a href="tel:+5555555555" class="btn btn-light"><i class="fa fa-phone-square" aria-hidden="true"></i>
-    +(44)555-5555</a>
-  <a href="mailto:CyberNetDetective@website.com" class="btn btn-light"><i class="fa fa-envelope-square"
-      aria-hidden="true"></i>info@CyberNetDetective.com</a>
-  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-      class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
-  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-      class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-      class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
-</div>
-<footer>
-  <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
-</footer>
+    <section class="pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <h3>What you will get with this tool</h3>
+            <hr />
+            <ul class="list-display list-checkmarks">
+              <li>The person or business that’s calling</li>
+              <li>Phone carrier</li>
+              <li>Phone type</li>
+              <li>Any aliases used by them</li>
+              <li>Current address, residence history and previously associated locations</li>
+              <li>Spam detection</li>
+              <li>The region/state</li>
+              <li>The city (see below)</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>What you won't get</h3>
+            <hr />
+            <ul class="list-display">
+              <li>You won’t be able to see call logs</li>
+              <li>Text messages</li>
+              <li>Phone bills </li>
+              <li>Other details about the phone used.</li>
+              <li>All that is restricted to the phone carrier (like AT&T or Verizon)</li>
+              <li>Anything that is not publicly available information.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- CONTAINER END -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="./assets/scripts/calltracker.js"></script>
+    <section id="about IPv4-6" class="scroll pb-5">
+      <hr />
+      <h2>Satisfy your curiosity with our detailed reports</h2>
+      <div class="container clearfix">
+                <img class="col-5 col-sm-5 col-md-5 float-start mb-4 mt-1 me-3"
+                  src="assets/Images/Women in tech.jpg" alt="About IPv4-6 image" loading="lazy" />
+        <p>
+          <b>Being informed matters.</b>
+          We are continuously updating our people search engine in an effort to provide you with
+          accurate and robust information.
+          That is why CyberNet Detective is truly one of the leading Reverse phone search websites on
+          the internet.
+          Our data is compiled from thousands of public records sources all over the world with
+          frequent updates to reflect.
+        <p>
+          <b>Research Online Dates.</b>
+          Catfishing, romance scams, unsafe predators. While online dating is a great way to expand
+          your dating pool,
+          it also exposes you to potential dangers. Stay safe with our reverse call lookup.
+          Before meeting up with someone you met online, run a quick search on their phone number so
+          you can make sure
+          they match up with who their profile says they are.
+        <p>
+          <b>Identify the Owner of an Unknown Number.</b>
+          Do you continuously get calls from an unknown number? Before blocking the number, consider
+          looking up the phone number’s owner.
+          You never know, it could be an old friend who changed their number or a long-lost family
+          member you never met! If you don’t recognize the owner,
+          you now have the information you need to take the best course of action.
+        </p>
+        <br />
+        <b>Whether you want to reunite with your college roommate or learn more about the person your
+          daughter is dating,
+          CyberNet detective is your go-to resource for finding people.</b>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT SECTION-->
+  <footer class="site-footer mt-5">
+    <div class="container py-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-brand d-flex align-items-center justify-content-center justify-content-md-start">
+            <i class="fa fa-shield text-primary me-2" aria-hidden="true"></i>
+            <span>CyberNet Detective</span>
+          </div>
+          <p class="small text-secondary mb-0">Investigate smarter with privacy-first lookup tools.</p>
+        </div>
+        <div class="col-md-5">
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+            <a href="tel:+5555555555" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-phone me-2" aria-hidden="true"></i>Call us</a>
+            <a href="mailto:CyberNetDetective@website.com" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-envelope me-2" aria-hidden="true"></i>Email</a>
+            <a href="Contact.html" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-comment-dots me-2" aria-hidden="true"></i>Contact form</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3 social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 footer-bottom">
+        <small class="mb-0 text-secondary">© <span class="current-year"></span> CyberNet Detective. All rights reserved.</small>
+        <small class="mb-0 text-secondary">Built for fast, confident investigations.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTAINER END -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="./assets/scripts/calltracker.js"></script>
+  <script src="./assets/scripts/footer.js"></script>
 </body>
 
 </html>
