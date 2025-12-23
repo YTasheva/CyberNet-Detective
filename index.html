@@ -22,7 +22,10 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CyberNet Detective</a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/Images/logo.jpg" alt="CyberNet Detective" class="brand-logo me-2">
+          <span>CyberNet Detective</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -64,7 +67,7 @@
     </section>
     <section>
       <div class="container clearfix">
-        <img class="col-5 col-sm-3 col-md-3 float-start mb-3 me-3" src="assets/Images/hacker.JPG"
+        <img class="col-5 col-sm-3 col-md-3 float-start mb-3 me-3" src="assets/Images/hacker.JPG" loading="lazy"
           alt="About us image" />
         <p>
           CyberNet Detective is a free reverse phone, email lookup service, IP geolocation and much more.
@@ -99,7 +102,7 @@
         <div class="row g-5">
           <div class="card col-md-4 col-sm-6 border-0">
             <a href="CallTracker.html" target="_blank">
-              <img src="./assets/Images/Women in tech.jpg" class="card-img-top" alt="Call Tracker" /></a>
+              <img src="./assets/Images/Women in tech.jpg" class="card-img-top" alt="Call Tracker" loading="lazy" /></a>
             <h3>Call Tracker</h3>
             <div class="card-body">
               <p class="card-text">
@@ -113,7 +116,7 @@
 
           <div class="card col-md-4 col-sm-6 border-0">
             <a href="IPTracker.html" target="_blank">
-              <img src="./assets/Images/digital concept-laptop.jpg" class="card-img-top" alt="IP Tracker" /></a>
+              <img src="./assets/Images/digital concept-laptop.jpg" class="card-img-top" alt="IP Tracker" loading="lazy" /></a>
             <h3>IP Tracker</h3>
             <div class="card-body">
               <p class="card-text">
@@ -127,7 +130,7 @@
 
           <div class="card col-md-4 col-sm-6 border-0">
             <a href="https://github.com/YTasheva/" target="_blank">
-              <img src="./assets/Images/AI concept.jpg" class="card-img-top" alt="Email Tracker" /></a>
+              <img src="./assets/Images/AI concept.jpg" class="card-img-top" alt="Email Tracker" loading="lazy" /></a>
             <h3>Email Tracker</h3>
             <div class="card-body">
               <p class="card-text">
@@ -141,7 +144,7 @@
 
           <div class="card col-md-4 col-sm-6 border-0">
             <a href="https://github.com/" target="_blank">
-              <img src="./assets/Images/digital devices.jpg" class="card-img-top" alt="Blacklist Check" /></a>
+              <img src="./assets/Images/digital devices.jpg" class="card-img-top" alt="Blacklist Check" loading="lazy" /></a>
             <h3>Blacklist Check</h3>
             <div class="card-body">
               <p class="card-text">
@@ -156,7 +159,7 @@
 
           <div class="card col-md-4 col-sm-6 border-0">
             <a href="https://github.com/" target="_blank">
-              <img src="./assets/Images/city worker concept.webp" class="card-img-top" alt="Website Domain Check" /></a>
+              <img src="./assets/Images/city worker concept.webp" class="card-img-top" alt="Website Domain Check" loading="lazy" /></a>
             <h3>Website Domain Check</h3>
             <div class="card-body">
               <p class="card-text">
@@ -170,7 +173,7 @@
 
           <div class="card col-md-4 col-sm-6 border-0">
             <a href="https://github.com/" target="_blank">
-              <img src="./assets/Images/ITProfessional.jpg" class="card-img-top" alt="People Search" /></a>
+              <img src="./assets/Images/ITProfessional.jpg" class="card-img-top" alt="People Search" loading="lazy" /></a>
             <h3>People Search</h3>
             <div class="card-body">
               <p class="card-text">
@@ -208,32 +211,43 @@
       </main>
 
   <!-- CONTACT SECTION-->
-  <footer>
-    <section id="contact" class="scroll">
-      <hr />
-      <a href="Contact.html" target="_blank">
-      <h2>Contact Us</h2>
-    </section>
-    <div class="container p-3 gap-2 d-grid d-md-flex flex-row flex-wrap justify-content-around">
-      <a href="tel:+5555555555" class="btn btn-light"><i class="fa fa-phone-square" aria-hidden="true"></i>
-        +(44)555-5555</a>
-      <a href="mailto:CyberNetDetective@website.com" class="btn btn-light"><i class="fa fa-envelope-square"
-          aria-hidden="true"></i>info@CyberNetDetective.com</a>
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+  <footer class="site-footer mt-5">
+    <div class="container py-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-brand d-flex align-items-center justify-content-center justify-content-md-start">
+            <i class="fa fa-shield text-primary me-2" aria-hidden="true"></i>
+            <span>CyberNet Detective</span>
+          </div>
+          <p class="small text-secondary mb-0">Investigate smarter with privacy-first lookup tools.</p>
+        </div>
+        <div class="col-md-5">
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+            <a href="tel:+5555555555" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-phone me-2" aria-hidden="true"></i>Call us</a>
+            <a href="mailto:ytashevagit@gmail.com.com" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-envelope me-2" aria-hidden="true"></i>Email</a>
+            <a href="Contact.html" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-comment-dots me-2" aria-hidden="true"></i>Contact form</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3 social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 footer-bottom">
+        <small class="mb-0 text-secondary">© <span class="current-year"></span> CyberNet Detective. All rights reserved.</small>
+        <small class="mb-0 text-secondary">Built for fast, confident investigations.</small>
+      </div>
     </div>
-    <footer>
-      <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
-    </footer>
+  </footer>
 
     <!-- CONTAINER END -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
+    <script src="./assets/scripts/footer.js"></script>
 </body>
 
 </html>
