@@ -120,8 +120,8 @@
 
 ### Links
 
-- [Solution URL](https://github.com/josh484/Cyber-security)
-- [Live Site URL](https://josh484.github.io/Cyber-security//)
+- [Solution URL](https://github.com/YTasheva/CyberNet-Detective)
+- [Live Site URL](https://ytasheva.github.io/CyberNet-Detective/)
 - [Presentation Slides](https://docs.google.com/presentation/d/1I_WNV0jQYidl4fSwkvmmIzwbB3qQf8Q1-QmXXNocJ7s/edit?usp=sharing)
   
 ### Built With
