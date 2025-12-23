@@ -9,39 +9,62 @@ body {
   text-align: center;
 }
 
-.background-image { 
-    Background-position: top;
-    background-image: url("../Images/business structure concept.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 600px;
-    position: relative;
+.bannerip {
+  background-image: url("../Images/business structure concept.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 650px;
+  position: relative;
 }
 
-#hero {
+.background-image {
   padding: 0;
   margin: 0;
 }
 
-.hero {
-  position: absolute;
-  bottom: 1%;
-  right: 5%;
-  background-color: #7e838578;
-  z-index: 1;
-  min-height: 56px;
+.overlay {
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.58), rgba(6, 39, 85, 0.45));
 }
 
 .card img:hover {
   cursor: pointer;
 }
 
-#contact {
-    background-color: #ffffff;
-    color: #c2c1c1;
-    padding: 50px 0;
-  }
+.mask {
+  background-color: rgba(188, 188, 188, 0.229);
+}
+
+
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+
+
+.hero-logo {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+.contact-card {
+  border: 0;
+  background: linear-gradient(135deg, #ffffff, #eef3ff);
+}
+
+.info-card {
+  border: 0;
+  background: linear-gradient(135deg, #0a2540, #0f3a6d);
+  color: #f8f9fa;
+}
 
   a:hover {
     -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
@@ -49,48 +72,47 @@ body {
     background-color: var(--NAV--LINK-HOVER);
 }
   
-  #contact h2 {
-    color: #060605;
-    text-align: center;
-  }
-  
-  #contactForm {
-    max-width: 600px;
-    width: 100%; 
-    margin: 0;    
-  }
-  
-  #contactForm label {
-    margin-bottom: 0.5rem;
-    color: #353432;
-  }
-  
-  #contactForm input,
-  #contactForm textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid #3e50f1;
-    background-color: #f7f5f5;
-    color: #141313;
-  }
-  
-  #contactForm textarea {
-    resize: vertical; /* Allow vertical resizing */
-  }
-  
-  #contactForm button {
-    background-color: rgb(20, 98, 255);
-    color: #edecf3;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #contactForm button:hover {
-    background-color: #0949c8;
-    color: #ffff;
-  }
+.contact-card label {
+  color: #1d2d4c;
+}
+
+.contact-card .form-control {
+  border: 1px solid #cdd7ed;
+  background-color: #f9fbff;
+}
+
+.contact-card .form-control:focus {
+  border-color: #6b8cff;
+  box-shadow: 0 0 0 0.1rem rgba(107, 140, 255, 0.3);
+}
+
+.contact-card button {
+  background-color: #1d6bff;
+  color: #edecf3;
+  border: none;
+}
+
+.contact-card button:hover {
+  background-color: #0f4fa8;
+  color: #fff;
+}
+
+.info-card .btn-outline-primary {
+  color: #f8f9fa;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.info-card .btn-outline-primary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.info-card .text-muted,
+.info-card p,
+.info-card h4 {
+  color: #f8f9fa !important;
+}
   .modal-body {
     color:  black ;
   }
@@ -104,27 +126,74 @@ body {
 
 
   /* .map-container --> map-container */
+  .map-shell {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f5f7fb;
+  }
   .map-container{
-    overflow:hidden;
-    padding-bottom:56.25%;
     position:relative;
-    height:0;
+    height: 320px;
+    width: 100%;
   }
   .map-container iframe{
-    left:0;
-    top:0;
-    height:50%;
-    width:50%;
     position:absolute;
+    inset:0;
+    height:100%;
+    width:100%;
   }
 
-  /* .footer --> footer */
-  footer {
-    padding: 30px;
-    clear: both;
-    text-align: center;
+  /* Footer */
+  .site-footer {
+    background: linear-gradient(180deg, #d5dceb, #c3ccdf);
+    color: #0a1423;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
   }
   
-  footer h3 {
-    font-size: 15px;
+  .site-footer a {
+    color: #18253f;
+    text-decoration: none;
+    box-shadow: none;
+  }
+  
+  .site-footer a:hover {
+    color: #0c3c87;
+    box-shadow: none;
+  }
+  
+  .footer-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+  }
+  
+  .footer-pill {
+    border: 1px solid #a9b7d1;
+    background: #d7deee;
+    color: #18253f;
+  }
+  
+  .footer-pill:hover {
+    background: #cdd6ea;
+    border-color: #95a6c8;
+    color: #0c3c87;
+  }
+  
+  .social-links a {
+    font-size: 1.1rem;
+    color: #18253f;
+  }
+  
+  .social-links a:hover {
+    color: #0c3c87;
+  }
+  
+  .site-footer .text-secondary {
+    color: #434d66 !important;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #b2bed8;
   }
