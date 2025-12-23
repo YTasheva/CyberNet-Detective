@@ -12,12 +12,22 @@ body {
   
   .background-image { 
       Background-position: top;
-      background-image: url("../Images/woman virtually searching .GIF");
+      background-image: image-set(
+        url("../Images/woman virtually searching .GIF") type("image/gif"),
+        url("../Images/ScreenshotCyberNet.jpg") type("image/jpeg")
+      );
       background-size: cover;
       background-attachment: fixed;
       width: 100%;
       height: 600px;
       position: relative;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .background-image {
+      background-image: url("../Images/ScreenshotCyberNet.jpg");
+      background-attachment: scroll;
+    }
   }
   
   #hero {
@@ -25,12 +35,26 @@ body {
     margin: 0;
   }
   
-  .hero {
+.hero {
     position: absolute;
     bottom: 1%;
     right: 5%;
-    background-color: #97abb47d;
+    background-color: rgba(0, 20, 58, 0.55);
+    color: #f8f9fa;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   }
+
+.brand-logo {
+    height: 44px;
+    width: auto;
+    display: block;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
   
   .card img:hover {
     cursor: pointer;
@@ -53,13 +77,57 @@ body {
     color: #042c75;
   }
 
-  /* .footer --> footer */
-  footer {
-    padding: 30px;
-    clear: both;
-    text-align: center;
+  /* Footer */
+  .site-footer {
+    background: linear-gradient(180deg, #d5dceb, #c3ccdf);
+    color: #0a1423;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
   }
   
-  footer h3 {
-    font-size: 15px;
+  .site-footer a {
+    color: #18253f;
+    text-decoration: none;
+    box-shadow: none;
+  }
+  
+  .site-footer a:hover {
+    color: #0c3c87;
+    box-shadow: none;
+  }
+  
+  .footer-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+  }
+  
+  .footer-pill {
+    border: 1px solid #a9b7d1;
+    background: #d7deee;
+    color: #18253f;
+  }
+  
+  .footer-pill:hover {
+    background: #cdd6ea;
+    border-color: #95a6c8;
+    color: #0c3c87;
+  }
+  
+  .social-links a {
+    font-size: 1.1rem;
+    color: #18253f;
+  }
+  
+  .social-links a:hover {
+    color: #0c3c87;
+  }
+  
+  .site-footer .text-secondary {
+    color: #434d66 !important;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #b2bed8;
   }
