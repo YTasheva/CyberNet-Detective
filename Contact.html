@@ -8,18 +8,13 @@
   <!-- Bootstrap 5 CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!--- JQuery for contact Form-->
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <!-- FONT AWESOME -->
   <script src="https://kit.fontawesome.com/5f6acac718.js" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./assets/css/Contact.css" />
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -28,7 +23,10 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CyberNet Detective</a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/Images/logo.jpg" alt="CyberNet Detective" class="brand-logo me-2">
+          <span>CyberNet Detective</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -56,9 +54,17 @@
     </nav>
 
     <!-- JUMBOTRON HERO -->
-
+    <div class="bannerip p-5 text-center bg-image rounded-3">
+      <div class="mask d-flex align-items-start">
+      <div class="d-flex justify-content-center align-items-start w-100 h-100 pt-4">
+        <div class="text-white">
+          <h1 class="mb-3 mt-3">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
     <section id="hero" class="container-fluid background-image">
-      <h2 class="hero p-2">Contact Us</h2>
+      <h2 class="hero p-2"></h2>
     </section>
 
   </header>
@@ -67,67 +73,77 @@
   <main>
     <section id="about" class="scroll">
       <hr />
-      <h2>How to Contact Us: Questions or Suggestions</h2>
-      <br>
-      <p>Feel free to send us an email using the contact form below or if you
-        would like to speak to someone via phone give our Customer Support team a ring on our toll free number.</p>
-      <br>
-      <p>
-      <h2>What's On Your Mind?</h2>
-      <br>
-      <b>CyberNet Detective</b>
-      reaches followers from all corners of the world.
-      We’d truly like to hear what you think about our content and website.
-      If you’d like to share what’s on your mind, you can do that below.
-      </p>
-      <br>
+      <div class="container text-center py-3">
+        <h2 class="mb-3">How to Contact Us</h2>
+        <p class="lead text-muted">Questions, suggestions, or feedback? Tell us what’s on your mind.</p>
+      </div>
     </section>
 
     <!-- CONTACT FORM -->
 
-    <section id="contact" class="scroll">
-      <hr />
-      <h2>Contact Us</h2>
+    <section id="contact" class="scroll py-4">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <form id="contactForm">
-              <div class="mb-3">
-                <label for="fullName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="fullName" name="fullName" required>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="card shadow contact-card h-100">
+              <div class="card-body p-4">
+                <p class="text-uppercase small text-primary fw-semibold mb-2">Get in touch</p>
+                <h3 class="h4 mb-2">We’re here to help</h3>
+                <p class="text-muted mb-3">Share a few details and our team will get back to you quickly.</p>
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Jane Doe" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                    <span class="small text-muted" id="form-status"></span>
+                  </div>
+                </form>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-              <div class="modal-content">
-               <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Form Submitted</h5>
-              
-           </button>
             </div>
-          <div class="modal-body">
-            We will contact you shortly with an update. Thank you for contacting us!
           </div>
-          <div class="modal-footer">
-          
+          <div class="col-lg-6">
+            <div class="card shadow h-100 info-card">
+              <div class="card-body p-4">
+                <h4 class="h5">Prefer to reach us directly?</h4>
+                <p class="text-muted">We respond fastest via email, but you can also call our support line.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <a href="tel:+5555555555" class="btn btn-outline-primary btn-sm"><i class="fa fa-phone me-2"></i>+(44)555-5555</a>
+                  <a href="mailto:ytashevagit@gmail.com" class="btn btn-outline-primary btn-sm"><i class="fa fa-envelope me-2"></i>Email us</a>
+                </div>
+                <p class="small text-muted mb-0">Typical response time: under 1 business day.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-      </div>
-            </form>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Form Submitted</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              We will contact you shortly with an update. Thank you for reaching out!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-      
     </section>
     <br>
 
@@ -136,44 +152,75 @@
       <hr />
       <h2>Our Location</h2>
       <br>
-      <div class="container-fluid">
-        <div id="map-container" class="z-depth-1-half map-container" style="height: 300px">
-          <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-            style="border:0" allowfullscreen>
-          </iframe>
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-8">
+            <div class="map-shell shadow-sm">
+              <div id="map-container" class="map-container">
+                <iframe src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <p class="text-uppercase small text-primary fw-semibold mb-2">Visit us</p>
+                <h4 class="h5 mb-2">Central London</h4>
+                <p class="text-muted mb-3">We’re available for scheduled visits and remote consultations.</p>
+                <ul class="list-unstyled text-muted small mb-0">
+                  <li><i class="fa fa-map-marker text-primary me-2"></i>221B Baker Street, London</li>
+                  <li class="mt-2"><i class="fa fa-clock-o text-primary me-2"></i>Mon–Fri: 9:00–18:00 (GMT)</li>
+                  <li class="mt-2"><i class="fa fa-phone text-primary me-2"></i>+(44) 555-5555</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Get In Touch Section-->
-  <footer>
-    <section id="contact" class="scroll">
-      <hr />
-      <a href="Contact.html" target="_blank"></a>
-      <h2>Get In Touch</h2>
-    </section>
-    <div class="container p-3 gap-2 d-grid d-md-flex flex-row flex-wrap justify-content-around">
-      <a href="tel:+5555555555" class="btn btn-light"><i class="fa fa-phone-square" aria-hidden="true"></i>
-        +(44)555-5555</a>
-      <a href="mailto:CyberNetDetective@website.com" class="btn btn-light"><i class="fa fa-envelope-square"
-          aria-hidden="true"></i>info@CyberNetDetective.com</a>
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i
-          class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+  <footer class="site-footer mt-5">
+    <div class="container py-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-brand d-flex align-items-center justify-content-center justify-content-md-start">
+            <i class="fa fa-shield text-primary me-2" aria-hidden="true"></i>
+            <span>CyberNet Detective</span>
+          </div>
+          <p class="small text-secondary mb-0">Investigate smarter with privacy-first lookup tools.</p>
+        </div>
+        <div class="col-md-5">
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+            <a href="tel:+5555555555" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-phone me-2" aria-hidden="true"></i>Call us</a>
+            <a href="mailto:CyberNetDetective@website.com" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-envelope me-2" aria-hidden="true"></i>Email</a>
+            <a href="Contact.html" class="btn btn-outline-light btn-sm footer-pill"><i class="fa fa-comment-dots me-2" aria-hidden="true"></i>Contact form</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3 social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 footer-bottom">
+        <small class="mb-0 text-secondary">© <span class="current-year"></span> CyberNet Detective. All rights reserved.</small>
+        <small class="mb-0 text-secondary">Built for fast, confident investigations.</small>
+      </div>
     </div>
-    <footer>
-      <h3 class="text-dark">&copy; 2023 CyberNet Detective. All Rights Reserved.</h3>
-    </footer>
+  </footer>
 
     <!-- CONTAINER END -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
       <script src="./assets/scripts/contact.js"></script>
+      <script src="./assets/scripts/footer.js"></script>
     </body>
 
 </html>
