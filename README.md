@@ -212,6 +212,5 @@ MIT License. See the LICENSE file for details.
 <h2 id="contact">Contact</h2>
 <p>
 Created by <a href="https://yuliya-tasheva.co.uk/" target="_blank">Yuliya Tasheva</a><br>
-LinkedIn: <a href="https://www.linkedin.com/in/yuliya-stella-tasheva" target="_blank">linkedin.com/in/yuliya-stella-tasheva</a>
 </p>
-
+Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
