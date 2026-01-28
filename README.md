@@ -92,6 +92,12 @@ CyberNet Detective is a web application for fast, privacy focused investigation 
   <li>Responsive design for desktop and mobile browsers</li>
 </ul>
 
+<h2>Screenshot</h2>
+
+<p>
+<img width="1497" alt="Screenshot Bootstrap1" src="https://github.com/YTasheva/CyberNet-Detective/blob/main/assets/Images/CyberNet%20Recording.gif">
+</p>
+
 <h2 id="tools">Tools</h2>
 <ul>
   <li><b>Call Tracker</b>. Look up unknown phone numbers and assess spam or fraud risk</li>
