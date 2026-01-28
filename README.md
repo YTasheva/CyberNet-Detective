@@ -202,8 +202,12 @@ Fork the repository, create a feature branch, and submit a pull request with cle
 </p>
 
 <h2 id="license">License</h2>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+<p>
+MIT License. See the LICENSE file for details.
+</p>
 
 <h2 id="contact">Contact</h2>
 <p>
