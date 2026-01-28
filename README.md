@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://yuliya-tasheva.co.uk/">
-    <img src="assets/images/CyberNet-banner.png" width="900px" alt="CyberNet Detective - Reverse Phone, Email Lookup Service and IP Geolocation">
+    <img src="images/CyberNet-banner.png" width="900px" alt="CyberNet Detective - Reverse Phone, Email Lookup Service and IP Geolocation">
   </a>
 </p>
 
