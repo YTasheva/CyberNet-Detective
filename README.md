@@ -156,6 +156,9 @@ Enter a phone number, email address, or IP address into the corresponding tool. 
 <p>
 Live demo: <a href="https://ytasheva.github.io/CyberNet-Detective/" target="_blank">https://ytasheva.github.io/CyberNet-Detective/</a>
 </p>
+<p>
+  Presentation Slides: <a href="https://docs.google.com/presentation/d/1I_WNV0jQYidl4fSwkvmmIzwbB3qQf8Q1-QmXXNocJ7s/edit?usp=sharing"
+</p>
 
 <h2 id="use-cases">Use Cases</h2>
 <ul>
