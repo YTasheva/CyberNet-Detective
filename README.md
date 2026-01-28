@@ -212,5 +212,8 @@ MIT License. See the LICENSE file for details.
 <h2 id="contact">Contact</h2>
 <p>
 Created by <a href="https://yuliya-tasheva.co.uk/" target="_blank">Yuliya Tasheva</a><br>
+  <a href="https://github.com/josh484/" target="_blank">Joshua Mendoza</a><br>
+  <a href="https://github.com/enx-code/" target="_blank">Enkhbat Baatar</a><br>
+  <a href="https://github.com/KevinDsouza7)/" target="_blank">Kevin Dsouza</a><br>
 </p>
-> Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
+
