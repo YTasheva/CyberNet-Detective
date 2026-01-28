@@ -153,12 +153,13 @@ cd CyberNet-Detective</code></pre>
 <p>
 Enter a phone number, email address, or IP address into the corresponding tool. Accept the terms of use to view the results. Reports display summary data first with expanded details available where supported.
 </p>
-<p>
-Live demo: <a href="https://ytasheva.github.io/CyberNet-Detective/" target="_blank">https://ytasheva.github.io/CyberNet-Detective/</a>
-</p>
-<p>
-  Presentation Slides: <a href="https://docs.google.com/presentation/d/1I_WNV0jQYidl4fSwkvmmIzwbB3qQf8Q1-QmXXNocJ7s/edit?usp=sharing"
-</p>
+
+<ul>
+  <li><a href="https://ytasheva.github.io/CyberNet-Detective/">Live site</a></li>
+  <li><a href="https://github.com/YTasheva/CyberNet-Detective/">GitHub repository</a></li>
+<li><a href="https://docs.google.com/presentation/d/1I_WNV0jQYidl4fSwkvmmIzwbB3qQf8Q1-QmXXNocJ7s/edit?usp=sharing/">Presentation Slides</a></li>
+</ul>
+
 
 <h2 id="use-cases">Use Cases</h2>
 <ul>
