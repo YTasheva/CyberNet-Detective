@@ -213,4 +213,4 @@ MIT License. See the LICENSE file for details.
 <p>
 Created by <a href="https://yuliya-tasheva.co.uk/" target="_blank">Yuliya Tasheva</a><br>
 </p>
-Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
+> Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
