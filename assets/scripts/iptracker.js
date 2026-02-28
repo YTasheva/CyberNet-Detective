@@ -103,7 +103,7 @@ function getIP(ip) {
     url: "https://netdetective.p.rapidapi.com/query?ipaddress=" + ip,
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e",
+      "X-RapidAPI-Key": "your_api_key_here",
       "X-RapidAPI-Host": "netdetective.p.rapidapi.com",
     },
   };
@@ -150,7 +150,7 @@ function ipDetails(ip) {
     url: "https://ip-geolocation-find-ip-location-and-ip-info.p.rapidapi.com/backend/ipinfo/?ip=" + ip,
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "e836cf5203msh52715a7d81a978ap1eb4a7jsne7d2dd82308e",
+      "X-RapidAPI-Key": "your_api_key_here",
       "X-RapidAPI-Host": "ip-geolocation-find-ip-location-and-ip-info.p.rapidapi.com",
     },
   };
